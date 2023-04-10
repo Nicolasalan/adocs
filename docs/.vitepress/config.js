@@ -11,14 +11,6 @@ export default {
          { text: "Contact", link: "/contact" },
          { text: "Guide", link: "/guide" },
          { text: "Configs", link: "/configs" },
-         {
-           // Dropdown Menu
-           text: "Changelog",
-           items: [
-             { text: "ROS 1", link: "/item-1" },
-             { text: "ROS 2", link: "/item-2" },
-           ],
-         },
        ],
        // Social Icons
        socialLinks: [
@@ -36,13 +28,12 @@ export default {
            text: "Navigation",
            collapsible: true,
            items: [
-             { text: "Introduction Navigation", link: "/navigation/introduction" },
-             { text: "Build a Map", link: "/navigation/mapping" },
-             { text: "Location of Robots", link: "/navigation/localization" },
-             { text: "Path Planning", link: "/navigation/path-planning" },
-             { text: "Param ROS", link: "/navigation/param" },
-             { text: "RNS", link: "/navigation/rns" },
-             { text: "Tips", link: "/navigation/tips" },
+             { text: "Introduction Navigation Nav2", link: "/navigation/introduction" },
+             { text: "How to Build a Map", link: "/navigation/mapping" },
+             { text: "How to Localize the Robot in the Environment", link: "/navigation/localization" },
+             { text: "How to do Path Planning", link: "/navigation/path-planning" },
+             { text: "How Obstacle Avoidance Happens in ROS", link: "/navigation/obstacle" },
+             { text: "Multitobot Navigation", link: "/navigation/multi" },
            ],
          },
          {
