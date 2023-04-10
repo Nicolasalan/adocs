@@ -104,7 +104,3 @@ dist
 
 # TernJS port file
 .tern-port
-
-# password manager
-#docs/.vitepress/auth/auth_config.ts
-#.env
