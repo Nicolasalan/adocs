@@ -1,0 +1,19 @@
+{
+  "hash": "930ba79f",
+  "browserHash": "396f7ca0",
+  "optimized": {
+    "vue": {
+      "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "file": "vue.js",
+      "fileHash": "c572c6f1",
+      "needsInterop": false
+    },
+    "@auth0/auth0-spa-js": {
+      "src": "../../../../node_modules/@auth0/auth0-spa-js/dist/auth0-spa-js.production.esm.js",
+      "file": "@auth0_auth0-spa-js.js",
+      "fileHash": "c8f3f5b4",
+      "needsInterop": false
+    }
+  },
+  "chunks": {}
+}
