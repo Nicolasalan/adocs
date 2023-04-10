@@ -106,6 +106,5 @@ dist
 .tern-port
 
 # password manager
-# password manager
-docs/.vitepress/auth/auth_config.ts
-.env
+#docs/.vitepress/auth/auth_config.ts
+#.env
