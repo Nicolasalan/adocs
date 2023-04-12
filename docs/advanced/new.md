@@ -67,7 +67,7 @@ As entradas primárias da ação são a pose para a qual você gostaria que o ro
 #### Demonstração
 Na demonstração a seguir, você usa a ação NavigateToPose para que seu robô conduza de seu ponto de parada até uma prateleira para que um humano coloque um item no robô. Em seguida, você dirigirá até o porta-paletes para envio no próximo caminhão fora do armazém.
 
-Comece criando um novo pacote chamado **nav2_new_features**, onde você coloca todos os scripts criados nesta unidade.
+Comece criando um novo pacote chamado **nav2_new_features**, onde você coloca todos os scripts criados deste topico.
 ```bash
 ros2 pkg create --build-type ament_python nav2_new_features --dependencies rclpy geometry_msgs
 ```
@@ -203,7 +203,7 @@ if __name__ == '__main__':
 ```
 Código extraído da documentação [oficial do Nav2](https://github.com/ros-planning/navigation2/tree/main/nav2_simple_commander/nav2_simple_commander).
 
-Observe o código e identifique onde você está usando a API Simple Commander e qual deve ser o comportamento esperado do robô. Não se preocupe se você não entender todo o código, pois ele será revisto posteriormente na unidade.
+Observe o código e identifique onde você está usando a API Simple Commander e qual deve ser o comportamento esperado do robô. Não se preocupe se você não entender todo o código, pois ele será revisto posteriormente nesse topico.
 
 Compile o pacote:
 ```bash
@@ -878,7 +878,7 @@ occupied_thresh: 0.65
 free_thresh: 0.196
 ```
 #### Configurar os nós de limite de velocidade
-Nesta unidade, aplique o filtro de velocidade somente ao mapa de custo global. Então, primeiro, atualize o parâmetro do filtro:
+Neste topico, aplique o filtro de velocidade somente ao mapa de custo global. Então, primeiro, atualize o parâmetro do filtro:
 
 >  Add to planner_server.yaml
 ```yaml

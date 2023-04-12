@@ -45,22 +45,6 @@ export default {
             { text: "Controller Server In Deep", link: "/advanced/deep" },
           ],
         },
-         {
-           text: "Manipulation",
-           collapsible: true,
-           items: [
-             { text: "Introduction Manipulation", link: "/test3" },
-             { text: "Getting Started", link: "/getting-started" },
-           ],
-         },
-         {
-           text: "DevOps",
-           collapsible: true,
-           items: [
-             { text: "Introduction DevOps", link: "/test4" },
-             { text: "Getting Started", link: "/getting-started" },
-           ],
-         },
        ],
        footer: {
          message: "Released under the MIT License.",

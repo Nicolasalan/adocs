@@ -15,7 +15,7 @@ O nav2_bt_navigator é responsável por controlar o movimento até a meta do rob
 2. O comportamento do node `bt_navigator`
 3. O node `recoveryies_server` e seu arquivo de configuração
 
-O comportamento do node bt_navigator e como ele se conecta com o recovery_server é especificado usando Árvores de Comportamento. Nesta unidade, você aprenderá como criar esses comportamentos e fornecê-los ao sistema de navegação.
+O comportamento do node bt_navigator e como ele se conecta com o recovery_server é especificado usando Árvores de Comportamento. Nesta topico, você aprenderá como criar esses comportamentos e fornecê-los ao sistema de navegação.
 
 ## O Node bt_navigator
 O `bt_navigator` é o node do Nav2 encarregado de gerenciar o planejador de caminho, o controlador e os comportamentos de recuperação.
@@ -27,9 +27,9 @@ A maneira como o bt_navigator deve gerenciar esses nós é definida em uma árvo
 ### Como criar um comportamento
 Para criar o comportamento, crie um arquivo XML usando os tipos de nós para comportamentos disponíveis. Este XML será fornecido ao bt_navigator para ser executado quando necessário.
 
-A biblioteca Behavior `Tree.CPP` fornece um conjunto de nós de comportamento já criados. No entanto, o Nav2 incluiu seu próprio tipo de nós de comportamento. Neste capítulo, você aprenderá sobre os nós de comportamento que o Nav2 oferece. Para outros nós de comportamento genéricos, verifique nosso curso Árvores de Comportamento para ROS2.
+A biblioteca Behavior `Tree.CPP` fornece um conjunto de nós de comportamento já criados. No entanto, o Nav2 incluiu seu próprio tipo de nós de comportamento. Neste capítulo, você aprenderá sobre os nós de comportamento que o Nav2 oferece. 
 
-> IMPORTANTE: Você não deve confundir nós ROS com nós de comportamento; são duas coisas diferentes. Para evitar confusão, nesta unidade, você escreverá os nós ROS em letras normais e os nós de comportamento em itálico.
+> IMPORTANTE: Você não deve confundir nós ROS com nós de comportamento; são duas coisas diferentes. Para evitar confusão, neste topico, você escreverá os nós ROS em letras normais e os nós de comportamento em itálico.
 
 Exemplo de comportamento: o arquivo `behavior.xml`
 ```xml
@@ -82,7 +82,7 @@ Para cada comportamento, comece com as seguintes tags:
 * A tag raiz identifica a árvore principal a ser executada
 * A tag BehaviorTree identifica o que segue como uma árvore de comportamento com um determinado nome (ID contém seu nome)
 
-Em seguida, na tag BehaviorTree, inclua os nós da árvore de comportamento que deseja usar e na ordem que cria o comportamento desejado. Por exemplo, para o comportamento padrão que você está usando no curso de navegação, você deseja o seguinte comportamento:
+Em seguida, na tag BehaviorTree, inclua os nós da árvore de comportamento que deseja usar e na ordem que cria o comportamento desejado. Por exemplo, para o comportamento padrão que você está usando na navegação, você deseja o seguinte comportamento:
 
 * Replaneje o caminho global a cada segundo (1 Hz)
 * Siga esse caminho
@@ -185,7 +185,7 @@ Chamadas para o servidor de ação ComputePathToPose ROS2 fornecido pelo `nav2_p
 
 O que é o `blackboard`?
 
-O `blackboard` é como um espaço para variáveis que todos os nós podem acessar. É usado para compartilhar informações entre os nós. Um nó pode colocar um valor lá e outro nó pode lê-lo. Saiba mais sobre isso em nosso curso sobre Behavior Tress for ROS2.
+O `blackboard` é como um espaço para variáveis que todos os nós podem acessar. É usado para compartilhar informações entre os nós. Um nó pode colocar um valor lá e outro nó pode lê-lo.
 
 > Exemplo do arquivo XML anterior:
 ```xml
@@ -298,7 +298,7 @@ No parâmetro, `pluging_lib_names` especifica a lista de nós de comportamento n
 
 Uma lista completa de plug-ins de nó disponíveis pode ser encontrada aqui
 
-Verifique o código que você criou na unidade `Path Planning`, onde realiza o carregamento do arquivo de configuração:
+Verifique o código que você criou no topico `Path Planning`, onde realiza o carregamento do arquivo de configuração:
 
 ```python
 bt_navigator_yaml = os.path.join(get_package_share_directory('path_planner_server'), 'config', 'bt_navigator.yaml')
@@ -377,7 +377,7 @@ Como o Groot não é instalado em um sistema ROS por padrão. Você precisará v
 Carregue seu arquivo `behavior.xml` no editor. Por isso:
 
 1. Clique no ícone Carregar Árvore
-2. Em seguida, selecione o arquivo do comportamento original que você está usando no curso (abra o arquivo `behavior.xml`)
+2. Em seguida, selecione o arquivo do comportamento original que você está usando (abra o arquivo `behavior.xml`)
 
 Você deve ver a árvore aparecendo.
 

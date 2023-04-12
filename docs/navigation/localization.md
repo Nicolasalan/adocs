@@ -102,7 +102,7 @@ O nó amcl é um componente essencial para a navegação autônoma, pois permite
 * Como fazer a localização global.
 
 O que significa localizar um robô no ambiente?
-Localização significa conhecer a posição atual do robô em relação ao ambiente. No seu caso, o robô precisa saber sua posição e orientação em relação ao ambiente, ou seja, o mapa do mundo que foi criado na última unidade. Isso é conhecido como a "pose" de um robô.
+Localização significa conhecer a posição atual do robô em relação ao ambiente. No seu caso, o robô precisa saber sua posição e orientação em relação ao ambiente, ou seja, o mapa do mundo que foi criado no ultimo topico. Isso é conhecido como a "pose" de um robô.
 
 ## AMCL
 ROS possui um algoritmo muito robusto para localização, o AMCL (Adaptive Monte-Carlo Localization). É um sistema probabilístico de localização para um robô em movimento em 2D.
@@ -171,7 +171,7 @@ Este nó gerencia o ciclo de vida dos nós envolvidos na navegação. Você apre
                {'node_names': ['map_server','amcl']}])
 ```
 
-Crie um arquivo de lançamento que inicie o sistema de localização para o robô simulado usando o mapa criado na unidade anterior.
+Crie um arquivo de lançamento que inicie o sistema de localização para o robô simulado usando o mapa criado no topivo anterior.
 
 * Crie um novo pacote chamado localization_server.
 * Crie um diretório de configuração e um diretório de lançamento.

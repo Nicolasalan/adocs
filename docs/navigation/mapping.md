@@ -188,7 +188,7 @@ Nas propriedades da exibição do mapa, defina o tópico para `/map`.
 
 Você deverá ver algo como a imagem abaixo em sua tela:
 
-Se você não conseguir ver o mapa, verifique se os parâmetros de qualidade de serviço (QoS) do tópico `/map` estão corretos (como na figura). Se você não sabe o que é QoS, revise o curso ROS2 Basics.
+Se você não conseguir ver o mapa, verifique se os parâmetros de qualidade de serviço (QoS) do tópico `/map` estão corretos (como na figura).
 
 Adicione mais algumas exibições:
 
@@ -259,7 +259,6 @@ Primeiro, o Cartographer se inscreve automaticamente nos seguintes tópicos:
 * `/scan` para dados de laser
 * `/odom` para dados de odometria
 * `/imu` para dados de IMU
-> IMPORTANTE: você não pode configurar os valores desses tópicos para o Cartographer, portanto, se o seu robô não publicar nesses tópicos, uma remapeamento deve ser necessário (consulte o curso ROS2 Basics para aprender como fazer isso).
 
 As seguintes são as principais opções de integração ROS do Cartographer, todas as quais devem ser especificadas no arquivo de configuração Lua:
 

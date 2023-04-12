@@ -22,7 +22,7 @@ Para começar a usar a navegação no ROS, é necessário baixar o repositório 
 cd ~/ws/src
 git clone https://bitbucket.org/theconstructcore/ros2_nav_files.git
 ```
-Isso fará o download dos arquivos do curso para o espaço de trabalho. Em seguida, obterá a distribuição do ROS2 que deseja usar e compilará o espaço de trabalho.
+Isso fará o download dos arquivos para o espaço de trabalho. Em seguida, obterá a distribuição do ROS2 que deseja usar e compilará o espaço de trabalho.
 
 ```python
 source /opt/ros/galactic/setup.bash

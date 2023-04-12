@@ -296,7 +296,7 @@ local_costmap:
 
 Como você pode ver, o mapa de custos local contém a mesma estrutura e conjunto de parâmetros do mapa de custos global. Isso faz todo o sentido, já que este Costmap é apenas uma versão reduzida e mais dinâmica do global.
 
-1. Adicione a lista anterior de configurações ao `controller.yaml` que você criou na unidade anterior.
+1. Adicione a lista anterior de configurações ao `controller.yaml` que você criou no topico anterior.
 2. Compilar e fonte.
 3. Em seguida, inicie todos os sistemas de planejamento de caminho (lembre-se de que também precisa ter o `map_server` e o `AMCL`).
 4. Abra o RVIZ, carregue o arquivo de configuração `pathplanning_rviz_config` que você criou na lição anterior e localize corretamente o arquivo robot.
