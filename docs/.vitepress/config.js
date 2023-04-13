@@ -45,6 +45,15 @@ export default {
             { text: "Controller Server In Deep", link: "/advanced/deep" },
           ],
         },
+        {
+          text: "Behavior Trees",
+          collapsible: true,
+          items: [
+            { text: "Introduction to Behavior Trees", link: "/Behavior_Trees/introduction" },
+            { text: "Design Principles", link: "/Behavior_Trees/design" },
+            { text: "Controller Server In Deep", link: "/Behavior_Trees/deep" },
+          ],
+        },
        ],
        footer: {
          message: "Released under the MIT License.",
