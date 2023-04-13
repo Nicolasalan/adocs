@@ -52,6 +52,7 @@ export default {
             { text: "Introduction to Behavior Trees", link: "/Behavior_Trees/introduction" },
             { text: "Design Principles", link: "/Behavior_Trees/design" },
             { text: "Behavior with ROS 2", link: "/Behavior_Trees/ros2" },
+            { text: "Stochastic Behavior Trees", link: "/Behavior_Trees/stochastic" },
           ],
         },
        ],
