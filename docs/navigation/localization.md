@@ -94,14 +94,14 @@ O serviço que permite dispersar as partículas do filtro aleatoriamente pelo am
 
 O nó amcl é um componente essencial para a navegação autônoma, pois permite que o robô se localize no mapa e, consequentemente, navegue com precisão e segurança. Por meio do algoritmo MCL, o nó amcl utiliza informações do laser, da odometria e do mapa do ambiente para gerar uma pose estimada do robô. Quanto mais o robô se move, mais informações o sistema de localização coleta, o que resulta em uma pose estimada mais precisa. Com isso, o nó amcl contribui diretamente para o sucesso da navegação autônoma, tornando possível que o robô se mova de forma autônoma em um ambiente desconhecido.
 
-----
+------------
 # Localização de robôs no ROS2
 * O significado de localizar um robô em um ambiente
 * Como realizar a localização no ROS2 usando o AMCL
 * Como definir a localização inicial do robô: manualmente, automaticamente e usando a API do ROS
 * Como fazer a localização global.
 
-O que significa localizar um robô no ambiente?
+**O que significa localizar um robô no ambiente?**
 Localização significa conhecer a posição atual do robô em relação ao ambiente. No seu caso, o robô precisa saber sua posição e orientação em relação ao ambiente, ou seja, o mapa do mundo que foi criado no ultimo topico. Isso é conhecido como a "pose" de um robô.
 
 ## AMCL
@@ -123,8 +123,8 @@ Você precisa iniciar três nós:
 
 ### 1. Início do nó do `map_server`
 Estes são os campos que você precisa indicar no lançamento do nó:
-* O map_server é fornecido pelo pacote nav2_map_server
-* O executável é chamado map_server
+* O map_server é fornecido pelo pacote `nav2_map_server`
+* O executável é chamado `map_server`
 * Os parâmetros que ele requer são:
      `use_sim_time`: é um booleano que indica se o map_server deve sincronizar seu tempo com a simulação.
      `yaml_filename`: é o caminho completo para o arquivo yaml do mapa.
@@ -140,7 +140,7 @@ Estes são os campos que você precisa indicar no lançamento do nó:
 ```  
 ### 2. Lançamento do nó amcl
 Estes são os campos que você precisa indicar no lançamento do nó:
-* O amcl é fornecido pelo pacote nav2_amcl
+* O amcl é fornecido pelo pacote `nav2_amcl`
 * O executável se chama amcl
 * O parâmetro necessário é:
      o arquivo `yaml` que contém todos os parâmetros de configuração do nó
@@ -154,8 +154,8 @@ Estes são os campos que você precisa indicar no lançamento do nó:
 
 ### 3. Para o lançamento do nó lifecycle_manager
 Este nó gerencia o ciclo de vida dos nós envolvidos na navegação. Você aprenderá mais sobre isso mais tarde.
-* O lifecycle_manager é fornecido pelo pacote nav2_lifecycle_manager.
-* O executável se chama lifecycle_manager.
+* O lifecycle_manager é fornecido pelo pacote `nav2_lifecycle_manager`.
+* O executável se chama `lifecycle_manager`.
 * Parâmetros necessários:
      `use_sim_time`: é um booleano que indica se o map_server deve sincronizar seu tempo com a simulação.
      `autostart`: é um booleano que indica se o gerenciador de ciclo de vida deve iniciar quando lançado.
@@ -173,10 +173,10 @@ Este nó gerencia o ciclo de vida dos nós envolvidos na navegação. Você apre
 
 Crie um arquivo de lançamento que inicie o sistema de localização para o robô simulado usando o mapa criado no topivo anterior.
 
-* Crie um novo pacote chamado localization_server.
+* Crie um novo pacote chamado `localization_server`.
 * Crie um diretório de configuração e um diretório de lançamento.
-* Dentro do diretório de lançamento, inclua um arquivo de lançamento chamado localization.launch.py que inicie os três nós necessários para a localização.
-* Dentro do diretório de configuração, inclua um arquivo yaml chamado amcl_config.yaml com o seguinte conteúdo:
+* Dentro do diretório de lançamento, inclua um arquivo de lançamento chamado `localization.launch.py` que inicie os três nós necessários para a localização.
+* Dentro do diretório de configuração, inclua um arquivo yaml chamado `amcl_config.yaml` com o seguinte conteúdo:
 
 > amcl_config.yaml
 ```lua
@@ -221,11 +221,11 @@ amcl:
     z_short: 0.05
 ```
 
-Antes de compilar o pacote localization_server, é necessário fazer algumas configurações:
+Antes de compilar o pacote `localization_server`, é necessário fazer algumas configurações:
 
-Se você criou um pacote Python puro usando o tipo de construção ament_python:
+Se você criou um pacote Python puro usando o tipo de construção `ament_python`:
 
-Abra o arquivo setup.py do pacote localization_server.
+Abra o arquivo `setup.py` do pacote localization_server.
 Adicione as linhas de instalação para os diretórios launch e config.
 
 ```python
@@ -237,7 +237,7 @@ Adicione as importações necessárias
 import os
 from glob import glob
 ```
-Construa o pacote (sempre no diretório ~/ros2_ws!)
+Construa o pacote (sempre no diretório `~/ros2_ws`)
 ```bash
 colcon build --packages-select localization_server
 source ~/ros2_ws/install/setup.bash
@@ -271,7 +271,7 @@ Adicione ao RVIZ os seguintes Displays:
 
 Salve agora esta configuração do RVIZ no diretório ros2_ws/src como `localizer_rviz_config`.
 
-Defina a pose inicial do robô no mapa. Clique na estimativa de `pose 2D` para localizar o robô no ambiente e, em seguida, clique no ponto do mapa que corresponde à posição real do robô na simulação.
+Defina a pose inicial do robô no mapa. Clique na `estimativa de pose 2D` para localizar o robô no ambiente e, em seguida, clique no ponto do mapa que corresponde à posição real do robô na simulação.
 
 Ao definir a estimativa de pose, todo o sistema AMCL começará a localizar o robô. Isso significa que ele começará a publicar a transformação entre `map` e `odom`.
 
