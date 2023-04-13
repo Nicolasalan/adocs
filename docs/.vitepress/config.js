@@ -51,7 +51,7 @@ export default {
           items: [
             { text: "Introduction to Behavior Trees", link: "/Behavior_Trees/introduction" },
             { text: "Design Principles", link: "/Behavior_Trees/design" },
-            { text: "Controller Server In Deep", link: "/Behavior_Trees/deep" },
+            { text: "Behavior with ROS 2", link: "/Behavior_Trees/ros2" },
           ],
         },
        ],
