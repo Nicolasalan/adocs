@@ -61,6 +61,7 @@ export default {
           items: [
             { text: "ROS2 Control basics", link: "/control/basic" },
             { text: "The controller manager", link: "/control/manager" },
+            { text: "Hardware Interface Implementation Template", link: "/control/interface" },
           ],
         },
        ],
