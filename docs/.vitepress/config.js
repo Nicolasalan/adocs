@@ -55,6 +55,14 @@ export default {
             { text: "Stochastic Behavior Trees", link: "/Behavior_Trees/stochastic" },
           ],
         },
+        {
+          text: "ROS2 Control basics",
+          collapsible: true,
+          items: [
+            { text: "ROS2 Control basics", link: "/control/basic" },
+            { text: "The controller manager", link: "/control/manager" },
+          ],
+        },
        ],
        footer: {
          message: "Released under the MIT License.",
