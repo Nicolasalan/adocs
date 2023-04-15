@@ -57,12 +57,13 @@ export default {
         },
         {
           text: "ROS2 Control basics",
-          collapsible: true,
+          collapsible: true, 
           items: [
             { text: "ROS2 Control basics", link: "/control/basic" },
             { text: "The controller manager", link: "/control/manager" },
             { text: "Hardware Interface Implementation Template", link: "/control/interface" },
             { text: "The ros2_controllers repository", link: "/control/repository" },
+            { text: "Creating a custom controller", link: "/control/custom" },
           ],
         },
        ],
