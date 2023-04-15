@@ -1077,3 +1077,7 @@ Se você seguiu passo a passo até aqui, verá seu código compilar com sucesso.
 ```bash
 source install/setup.bash
 ```
+Agora você pode iniciar o robô e o novo controlador usando o arquivo de inicialização que acabamos de criar.
+```bash
+ros2 launch my_robot_bringup rrbot_with_rrbot_controller.launch.py
+```

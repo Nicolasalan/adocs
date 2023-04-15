@@ -66,6 +66,13 @@ export default {
             { text: "Creating a custom controller", link: "/control/custom" },
           ],
         },
+        {
+          text: "URDF for Robot Modeling in ROS",
+          collapsible: true, 
+          items: [
+            { text: "Building a Visual Robot Model with URDF", link: "/urdf/build" },
+          ],
+        },
        ],
        footer: {
          message: "Released under the MIT License.",
