@@ -13,7 +13,7 @@ hero:
       height: 500px
       margin-top: 30px
       margin-right: 15px
-  tagline: Courses, Tutorials, Tips and References
+  tagline: ROS tutorials
   actions:
     - theme: brand
       text: Get Started
@@ -31,9 +31,9 @@ features:
     title: Vision
     details: Lorem ipsum...
   - icon: 🤖
-    title: Manipulation 
+    title: Behavior 
     details: Lorem ipsum...
   - icon: 📦
-    title: DevOps 
+    title: Docker 
     details: Lorem ipsum...
 

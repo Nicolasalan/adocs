@@ -9,3 +9,5 @@
 - veja
 - seção
 - Como de costume
+- Por favor
+- aprenderá
