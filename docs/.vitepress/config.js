@@ -70,7 +70,18 @@ export default {
           text: "URDF for Robot Modeling in ROS",
           collapsible: true, 
           items: [
+            { text: "Introduction", link: "/urdf/intro" },
             { text: "Building a Visual Robot Model with URDF", link: "/urdf/build" },
+          ],
+        },
+        {
+          text: "TF ROS2",
+          collapsible: true, 
+          items: [
+            { text: "Introduction", link: "/tf/intro" },
+            { text: "TF Basics", link: "/tf/basics" },
+            { text: "TF Broadcasting and Listening", link: "/tf/listen" },
+            { text: "Robot State Publisher", link: "/tf/publisher" },
           ],
         },
        ],

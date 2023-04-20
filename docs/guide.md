@@ -1,0 +1,11 @@
+- Unidade
+- Curso
+- Você
+- Aula
+- Exercício
+- Atividade
+- ver algo como
+- iremo
+- veja
+- seção
+- Como de costume
