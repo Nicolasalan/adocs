@@ -24,6 +24,14 @@ export default {
        ],
        // Sidebar
        sidebar: [
+        {
+          text: "ROS",
+          collapsible: true, 
+          items: [
+            { text: " ROS2 Python Build System", link: "/ros/build" },
+            { text: " Advanced Launch Files", link: "/ros/launch" },
+          ],
+        },
          {
            text: "Navigation",
            collapsible: true,
