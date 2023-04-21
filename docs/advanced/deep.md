@@ -45,7 +45,7 @@ O `nav2_controller` fornece o plug-in atualmente disponível. Ele verifica se o 
 
 Este é um plugin simples. Não verifica se o movimento faz sentido ou se é em direção ao objetivo. Em vez disso, ele verifica se o robô se moveu pelo menos `required_movement_radius` metros em `motion_time_allowance` segundos.
 
-Este plugin é básico. Você pode tentar implementar plugins mais complexos por conta própria. Revise a unidade sobre como criar seus próprios plug-ins para Nav2.
+Este plugin é básico. Você pode tentar implementar plugins mais complexos por conta própria. 
 
 ### O goal_checker_plugins
 Este plug-in verifica se o robô alcançou a pose desejada dentro de tolerâncias específicas. Lembre-se que diminuir muito as tolerâncias pode fazer com que o robô nunca atinja a meta. Por outro lado, aumentar demais as tolerâncias resultaria em uma posição final muito distante do esperado.

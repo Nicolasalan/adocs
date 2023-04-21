@@ -11,3 +11,10 @@
 - Como de costume
 - Por favor
 - aprenderá
+- conferir
+- desculpe/a
+- crie
+- Legal
+- Incrivel
+- Otimo
+- exercise

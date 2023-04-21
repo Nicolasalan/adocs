@@ -4,7 +4,7 @@
 * Experimente uma demonstração do robô Tiago e veja os quadros TF em ação
 
 ## Configuração preliminar
-Antes de iniciar o curso, você precisa executar um comando git clone da sua pasta `ros2_ws/src` para obter os pacotes que precisaremos.
+Antes de iniciar a seção, você precisa executar um comando git clone da sua pasta `ros2_ws/src` para obter os pacotes que precisaremos.
 ```bash
 cd ~/ros2_ws/src
 git clone https://bitbucket.org/theconstructcore/ros2_tf_course.git
@@ -32,7 +32,7 @@ Para um ser humano, esta parece ser uma pergunta fácil. Bem ali no meio da sala
 Para poder fornecer uma posição das mesas usando valores precisos, precisamos de um ponto de referência fixo de onde possamos determinar suas coordenadas de posição. Este é um conceito muito importante aqui: as coordenadas de posição não têm significado sem especificar um quadro de coordenadas. Vamos explorar um pouco mais o conceito de referencial de coordenadas.
 
 ## Sistemas de coordenadas, referenciais e referenciais
-Um referencial de coordenadas é um conjunto de eixos ortogonais que se cruzam em um ponto que chamamos de origem que serve para descrever a posição dos pontos em relação a essa origem. Observe que o termo sistema de coordenadas pode ser usado de forma intercambiável com quadro de referência ou quadro de coordenadas, mas usaremos o último termo para este curso, pois ele se tornou mais amplamente usado pelo ROS. Na verdade, no ROS, na maioria das vezes, você verá apenas o termo tf frame, que é apenas a forma abreviada de transform frame.
+Um referencial de coordenadas é um conjunto de eixos ortogonais que se cruzam em um ponto que chamamos de origem que serve para descrever a posição dos pontos em relação a essa origem. Observe que o termo sistema de coordenadas pode ser usado de forma intercambiável com quadro de referência ou quadro de coordenadas, mas usaremos o último termo para esta seção, pois ele se tornou mais amplamente usado pelo ROS. Na verdade, no ROS, na maioria das vezes, você verá apenas o termo tf frame, que é apenas a forma abreviada de transform frame.
 
 ### Quadros de Coordenadas em 2D
 Você provavelmente está familiarizado com o plano cartesiano, que usa coordenadas de posição na forma (x, y). Por exemplo, olhe para o plano cartesiano abaixo.
@@ -161,7 +161,7 @@ Além disso, normalmente você não deseja adicionar manualmente o TF toda vez q
 > Quando terminar o exercício anterior, pressione CTRL+C para parar os nós static_transform_publisher e rviz2 e poder digitar mais comandos. Não pare o Shell #1, que contém a simulação em execução.
 
 ## Os muitos quadros de coordenadas de um robô
-Ao trabalhar com robôs, devemos criar um modelo de robô para ter uma representação da estrutura do robô. No ROS usamos o que chamamos de arquivos URDF e XACRO para criar esses modelos de robôs. Não vamos entrar em todos os detalhes sobre arquivos URDF e XACRO porque esse é o assunto do curso URDF para Modelagem de Robôs no ROS2. Mas o que você precisa saber ao trabalhar com transformações é que cada articulação do robô tem um quadro de coordenadas associado a ela. Dessa forma, podemos acompanhar facilmente a posição dos links do robô no espaço. Para entender melhor esse conceito, dê uma olhada no seguinte exercício:
+Ao trabalhar com robôs, devemos criar um modelo de robô para ter uma representação da estrutura do robô. No ROS usamos o que chamamos de arquivos URDF e XACRO para criar esses modelos de robôs. O que você precisa saber ao trabalhar com transformações é que cada articulação do robô tem um quadro de coordenadas associado a ela. Dessa forma, podemos acompanhar facilmente a posição dos links do robô no espaço. Para entender melhor esse conceito, dê uma olhada no seguinte exercício:
 ```bash
 source ~/ros2_ws/install/setup.bash
 ros2 lançamento tiago_demo tiago_demo.launch.py
@@ -187,4 +187,4 @@ Este é um problema comum ao carregar um modelo de robô no Rviz. Felizmente, vo
 
 Em seguida, adicione um display TF como você fez no exercício anterior.
 
-Cada um desses eixos vermelho, azul e verde representa um quadro de coordenadas. Como você pode ver, mesmo em um robô de tamanho médio, dezenas de quadros de coordenadas podem ser usados. Portanto, é essencial acompanhar onde cada quadro de coordenadas está em qualquer ponto no tempo para garantir que o robô esteja ciente da posição de seus elos no espaço e de outros objetos no ambiente. Para gerenciar essa complexidade, precisamos de ferramentas e métodos especializados. Tudo isso, e muito mais, será abordado durante o curso.
+Cada um desses eixos vermelho, azul e verde representa um quadro de coordenadas. Como você pode ver, mesmo em um robô de tamanho médio, dezenas de quadros de coordenadas podem ser usados. Portanto, é essencial acompanhar onde cada quadro de coordenadas está em qualquer ponto no tempo para garantir que o robô esteja ciente da posição de seus elos no espaço e de outros objetos no ambiente. Para gerenciar essa complexidade, precisamos de ferramentas e métodos especializados.

@@ -308,21 +308,19 @@ critics: ["RotateToGoal", "Oscillation", "ObstacleFootprint", "GoalAlign", "Path
 ```
 Esses plugins são definidos [AQUI](https://github.com/ros-planning/navigation2/tree/main/nav2_dwb_controller/dwb_critics). Por exemplo, aqui está o plug-in [OSCILLATION CRITIC](https://github.com/ros-planning/navigation2/blob/main/nav2_dwb_controller/dwb_critics/src/oscillation.cpp). Os plugins críticos são da classe base `dwb_core::TrajectoryCritic`.
 
-Como você pode ver, é um tópico profundo e seria necessário um curso inteiro para explicar detalhadamente os plugins.
-
 Agora você criará vários exemplos e exercícios que ensinam como modificar e criar Plugins CUSTOM para **Costmaps**, **Planning** e **Controllers**.
 
 ## Criação de plug-ins Nav2 personalizados
 
 A maioria das etapas para criar os plug-ins são idênticas, mas existem alguns elementos diferentes baseados essencialmente na classe Base na qual cada plug-in pode ser baseado.
 
-Você também precisa de uma pilha de navegação funcional para testar todos os novos plugins. Para isso, configure uma navegação padrão pronta para uso, caso não tenha conseguido fazê-la funcionar nas unidades anteriores ou tenha pulado para esta seção e não tenha concluído as unidades anteriores.
+Você também precisa de uma pilha de navegação funcional para testar todos os novos plugins. Para isso, configure uma navegação padrão pronta para uso.
 
 ### Configuração de navegação
 
 Se você deseja que a localização comece corretamente e não precise mover o robô para relocalizar, você tem duas opções:
 
-1. Inicie a localização desde o início. Não o interrompa durante sua sessão nesta unidade.
+1. Inicie a localização desde o início.
 2. Reinicie a simulação sempre que reiniciar a localização.
 
 Baixe em seu ~/ros2_ws/src o seguinte código:

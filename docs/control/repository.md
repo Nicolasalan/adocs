@@ -3,7 +3,7 @@
 `ros2_control` oferece aos desenvolvedores um grande conjunto de transmissores e controladores genéricos que podem ser usados com diferentes tipos de sensores e atuadores em diferentes modos de controle. Por exemplo, os transmissores incluídos podem ler e publicar estados como estados de juntas (posição, velocidade e esforço), dados de IMU e valores de força-torque. Além da leitura, os controladores incluídos permitem enviar comandos usando o controle de posição, mas também os valores de velocidade e esforço. Esses recursos facilitam o início rápido de um pipeline `ros2_control` sem precisar começar do zero.
 
 ## Controladores Disponíveis
-No momento da redação deste curso, a lista de controladores incluídos que podem ser escolhidos é a seguinte:
+A lista de controladores incluídos que podem ser escolhidos é a seguinte:
 
 **Controladores:**
 

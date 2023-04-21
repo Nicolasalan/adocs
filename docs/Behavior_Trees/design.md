@@ -1,13 +1,13 @@
 # Princípios de Design de Árvores Comportamentais no Contexto de uma Tarefa Bem-sucedida Descrição do Agente Autônomo
 
 ## Arquitetura de Árvores Comportamentais
-Na unidade anterior, introduzimos o conceito de BT e definimos primitivas lógicas para arquitetar o comportamento de agentes autônomos (um robô). Agora você entende a pilha de abstração e pode localizar BT nela.
+Na Seção anterior, introduzimos o conceito de BT e definimos primitivas lógicas para arquitetar o comportamento de agentes autônomos (um robô). Agora você entende a pilha de abstração e pode localizar BT nela.
 
-Embora os BTs sejam razoavelmente simples de compreender e usar, é benéfico estar ciente dos princípios e métodos de design que podem ser usados em muitos contextos para realizar plenamente seu potencial. Vários exemplos serão usados para ilustrar essas ideias na unidade seguinte.
+Embora os BTs sejam razoavelmente simples de compreender e usar, é benéfico estar ciente dos princípios e métodos de design que podem ser usados em muitos contextos para realizar plenamente seu potencial. Vários exemplos serão usados para ilustrar essas ideias.
 
 Especificamos a interpretação lógica de como o robô se comporta durante a execução da tarefa conforme refletido no arquivo XML.
 
-Neste curso, você usa o `framework BehaviourTree.CPP`, que habilita e protege as tarefas do robô que serão executadas de acordo com as definições lógicas (escritas em XML). Isso significa que o robô percorre o BT de acordo.
+Neste seção, você usa o `framework BehaviourTree.CPP`, que habilita e protege as tarefas do robô que serão executadas de acordo com as definições lógicas (escritas em XML). Isso significa que o robô percorre o BT de acordo.
 
 A pilha a seguir ilustra as relações e ações a serem executadas usando o BT para modelar a tarefa do robô. O diagrama fornece uma visão geral do fluxo de dados durante a execução do aplicativo do robô incorporado ao BT.
 
@@ -21,7 +21,7 @@ Imagine que seu robô deve executar a tarefa (por exemplo, limpar o chão). A ta
 
 Usando a estrutura BehaviourTree.CPP, você cria a declaração de nós (seguindo o XML; arquitetura BT) e definições. Então, criando as definições dos nós, você expressa as ações executadas neste nó BT.
 
-Um conjunto de ações definidas por um nó BT é considerado um callback (BT chama outras funções/ações). Neste curso, você define um conjunto de ações executadas no nó ROS. Além disso, o nó ROS se comunica com um robô ou simulação (no seu caso, Gazebo). Os nós ROS recebem o feedback e enviam o estado (feedback) para o nó BT. A análise de feedback afeta o nó BT e envia o retorno para a Raiz (SUCCESS, FAILURE ou RUNNING).
+Um conjunto de ações definidas por um nó BT é considerado um callback (BT chama outras funções/ações). Neste seção, você define um conjunto de ações executadas no nó ROS. Além disso, o nó ROS se comunica com um robô ou simulação (no seu caso, Gazebo). Os nós ROS recebem o feedback e enviam o estado (feedback) para o nó BT. A análise de feedback afeta o nó BT e envia o retorno para a Raiz (SUCCESS, FAILURE ou RUNNING).
 
 Tendo em mente a pilha de abstrações definida anteriormente, você pode avaliar novamente o BT, que define o fluxo lógico. O projeto detalhado dos nós ROS é desvinculado do conceito BT.
 

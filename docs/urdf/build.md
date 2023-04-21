@@ -196,7 +196,6 @@ Agora você pode compilar normalmente:
 colcon build --packages-select my_box_bot_description
 source install/setup.bash
 ```
-Se você quiser entender por que está fazendo isso, revise o curso Básico do ROS2.
 Agora, adicione o seguinte código a `urdf_visualize.launch.py`.
 
 > urdf_visualize.launch.py
@@ -311,7 +310,7 @@ Modelo do Robô: Neste caso, clique no triângulo preto à esquerda do Modelo do
 
 Ao concluir essas etapas, você deve ter algo semelhante a isto:
 
-A caixa vermelha que você vê na janela de exibição principal é o modelo de robô que construímos até agora. Estaremos usando o Rviz para visualizar o progresso da criação do modelo do robô ao longo do curso.
+A caixa vermelha que você vê na janela de exibição principal é o modelo de robô que construímos até agora. Estaremos usando o Rviz para visualizar o progresso da criação do modelo do robô ao longo da seção.
 
 Agora salve a configuração do Rviz para uso posterior. Vá para Arquivo, em seguida, Salvar configuração como, navegue até o pacote `my_box_bot_description` e dentro da pasta rviz. Use como nome de arquivo urdf_vis.rviz e clique em 'Salvar'.
 
@@ -898,7 +897,8 @@ Além disso, se você abrir as Ferramentas Gráficas, deverá ter a GUI Joint St
 ## Importar e usar malhas 3D
 Este é um tópico amplo e há muitas maneiras de fazê-lo. Primeiro, porém, você aprenderá os elementos básicos necessários para importar modelos 3D corretamente.
 
-Os modelos finais devem ser salvos no formato STL, DAE ou OBJ ao usar uma ferramenta CAD. O SOLIDWORKS, por exemplo, oferece a opção de STL. Os modelos DAE salvam informações de cores e podem ter texturas associadas a eles. No entanto, isso é algo que pode ser adicionado no Blender. O mesmo com OBJ, mas você não usará OBJ neste curso.
+Os modelos finais devem ser salvos no formato STL, DAE ou OBJ ao usar uma ferramenta CAD. O SOLIDWORKS, por exemplo, oferece a opção de STL. Os modelos DAE salvam informações de cores e podem ter texturas associadas a eles. No entanto, isso é algo que pode ser adicionado no Blender. 
+
 Importe o STL dos modelos DAE para o Blender. Aqui você definirá a origem do modelo e as unidades. Isso é vital. A configuração do eixo determinará o quão difícil é criar o modelo URDF. Quanto às unidades, você deve dimensioná-las adequadamente para simplificar o trabalho do URDF posteriormente.
 Depois que o eixo e as unidades estiverem configurados, você pode adicionar material ao modelo do Blender para adicionar cor ou usar qualquer técnica de texturização.
 Uma vez feito, exporte-o para o formato DAE. Se você usou texturas, certifique-se de que as texturas sejam exportadas no mesmo local que o arquivo DAE.

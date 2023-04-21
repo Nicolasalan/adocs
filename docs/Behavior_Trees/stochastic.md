@@ -80,7 +80,7 @@ O exemplo descrito é simples para destacar o conceito; no entanto, cálculos se
 
 ## Cadeia de Markov
 
-Como a teoria deste parágrafo está além do escopo do curso, você se concentrará na intuição e investigará as probabilidades de sucesso e a confiabilidade de execução dos nós BT.
+Como a teoria deste parágrafo está além do escopo, você se concentrará na intuição e investigará as probabilidades de sucesso e a confiabilidade de execução dos nós BT.
 
 Para entender melhor o conceito discutido, considere o diagrama abaixo (o exemplo é derivado do livro recomendado: "Behaviour Trees in Robotics and AI" de Michele Colledanchise e Petter Ögren).
 
@@ -97,7 +97,7 @@ A probabilidade de sucesso de cada tarefa é mostrada no diagrama. Por exemplo, 
 
 Tendo em conta as probabilidades definidas no parágrafo anterior, calcule a probabilidade de sucesso, neste caso, igual a = 0,829 (considere o diagrama acima).
 
-Para realizar uma análise de desempenho profunda (fora do escopo deste curso), transforme o BT em Cadeia de Markov, onde as transições entre os estados são especificadas por probabilidades de transição.
+Para realizar uma análise de desempenho profunda, transforme o BT em Cadeia de Markov, onde as transições entre os estados são especificadas por probabilidades de transição.
 
 A característica mais importante da Cadeia de Markov é o fato de que ela precisa ser "sem memória". Em outras palavras, a probabilidade da próxima ação é completamente independente da ação tomada para chegar ao estado atual.
 

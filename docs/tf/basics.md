@@ -174,7 +174,7 @@ Then start Rviz:
 ```bash
 rviz2
 ```
-Ao adicionar um modelo de robô ao RVIZ, podem aparecer alguns erros relativos às texturas do Cam_bot. Este é um problema conhecido com RVIZ com certas codificações de texturas. No entanto, não há nenhum problema que afete o curso.
+Ao adicionar um modelo de robô ao RVIZ, podem aparecer alguns erros relativos às texturas do Cam_bot. Este é um problema conhecido com RVIZ com certas codificações de texturas. 
 
 A janela Ferramentas Gráficas deve aparecer e exibir RVIZ2 quando estiver pronto:
 

@@ -21,7 +21,6 @@ Além disso, após a compilação, você deve fornecer o espaço de trabalho par
 ```bash
 source install/setup.bash
 ```
-Ótimo! Agora você está pronto para trabalhar nos exercícios dos cursos.
 
 ### Gere o robô no Gazebo
 Como você pode ver na janela Gazebo, a simulação exibe um plano vazio.

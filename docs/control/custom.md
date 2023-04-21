@@ -4,7 +4,7 @@ Esta unidade descreve como escrever um novo controlador personalizado mínimo qu
 ## Introdução
 Os controladores estão no coração do sistema ros2_control. Conforme abordado anteriormente na unidade 6, o pacote ros2_controllers inclui um conjunto de controladores padrão comuns e abrangentes que atendem a muitos casos de uso comuns. Exemplos de tais controladores são controlador de esforço, controlador de trajetória e controlador de acionamento diferencial e a lista de controladores fornecidos está crescendo a cada versão do ROS2. No entanto, tanto quanto alguns controladores podem ser amplamente aplicados a muitos tipos diferentes de aplicações robóticas, também é verdade que algumas aplicações também requerem controladores extremamente específicos, dependendo da natureza e requisitos de uma aplicação.
 
-Felizmente, o `ros2_control` é flexível o suficiente para permitir que você crie controladores personalizados para estender sua funcionalidade. Dessa forma, você também pode usar `ros2_control` para resolver problemas de controle mais complexos sem muito trabalho. Nesta unidade do curso, você aprenderá como criar um controlador personalizado seguindo algumas etapas simples. Apenas um breve lembrete: tenha em mente que o foco deste curso é o framework `ros2_control` e não sobre a teoria de controle de robôs. Para uma discussão sobre os conceitos teóricos subjacentes dos controladores, consulte o curso de teoria de controle de robôs. Hora de colocar a mão na massa em controladores personalizados!
+Felizmente, o `ros2_control` é flexível o suficiente para permitir que você crie controladores personalizados para estender sua funcionalidade. Dessa forma, você também pode usar `ros2_control` para resolver problemas de controle mais complexos sem muito trabalho. Nesta seção, você aprenderá como criar um controlador personalizado seguindo algumas etapas simples. Apenas um breve lembrete: tenha em mente que o foco é o framework `ros2_control` e não sobre a teoria de controle de robôs. Para uma discussão sobre os conceitos teóricos subjacentes dos controladores.
 
 ## Seu controlador personalizado em cinco etapas
 Para implementar uma interface de hardware para um dispositivo de hardware, você precisará fazer o seguinte:
@@ -212,7 +212,7 @@ protected:
   std::unique_ptr<ControllerStatePublisher> state_publisher_
 ```
 Por fim, declaramos as variáveis que precisaremos para este controlador, bem como um assinante e um objeto publicador.
-> A forma como esses métodos são nomeados passou por algumas mudanças nas últimas versões do ROS2_Control. Este curso é para a versão ROS2 Galactic. Embora as mudanças sejam pequenas, é importante para você saber qual versão do ROS2_Control você possui.
+> A forma como esses métodos são nomeados passou por algumas mudanças nas últimas versões do ROS2_Control. Este seção é para a versão ROS2 Galactic. Embora as mudanças sejam pequenas, é importante para você saber qual versão do ROS2_Control você possui.
 
 ## Add a .cpp source file
 Em seguida, devemos adicionar o arquivo de origem correspondente dentro da pasta src do pacote e definir todos os métodos que acabamos de declarar no arquivo de cabeçalho.

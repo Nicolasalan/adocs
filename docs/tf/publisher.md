@@ -6,7 +6,7 @@
 
 ## Gere um robô no Gazebo
 
-Use o pacote gerado anteriormente neste curso para criar um arquivo de inicialização que gera um robô dentro do Gazebo.
+Use o pacote gerado anteriormente nesta seção para criar um arquivo de inicialização que gera um robô dentro do Gazebo.
 Para começar, precisamos de um novo arquivo de inicialização:
 ```bash
 cd ~/ros2_ws/src/my_tf_ros2_course_pkg/launch

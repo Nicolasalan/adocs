@@ -6,7 +6,7 @@
 ## O que é um Pacote?
 O ROS2 usa pacotes para organizar seus programas. Você pode pensar em um pacote como todos os arquivos que um programa ROS2 específico contém; todos os seus arquivos CPP, arquivos Python, arquivos de configuração, arquivos de compilação, arquivos de inicialização e arquivos de parâmetros. Além disso, organizar seus programas ROS2 em pacotes torna muito mais fácil compartilhá-los com outros desenvolvedores/usuários.
 
-No ROS2, você pode criar dois tipos de pacotes: pacotes Python e pacotes CMake (C++). Para este curso, porém, vamos nos concentrar nos primeiros. Pacotes Python conterão executáveis Python.
+No ROS2, você pode criar dois tipos de pacotes: pacotes Python e pacotes CMake (C++). Porém, vamos nos concentrar nos primeiros. Pacotes Python conterão executáveis Python.
 
 Todo pacote Python terá a seguinte estrutura de arquivos e pastas:
 
@@ -46,7 +46,7 @@ mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws
 colcon build
 ```
-Para este curso, no entanto, não é necessário criá-lo, pois já o criamos para você.
+Para esta seção, no entanto, não é necessário criá-lo, pois já o criamos para você.
 Neste ponto, você está finalmente pronto para criar seu próprio pacote! Para fazer isso, digite o seguinte em seu shell:
 ```bash
 cd ~/ros2_ws/src
@@ -70,7 +70,7 @@ Crie o hábito de obter o setup.bash da pasta de instalação para que o ROS pos
 ```bash
 source install/setup.bash
 ```
-Os pacotes são organizados dentro de áreas de trabalho. Cada área de trabalho pode conter quantos pacotes você desejar. Para este curso, seu espaço de trabalho é denominado `ros2_ws`. Assim, a estrutura geral ficaria assim:
+Os pacotes são organizados dentro de áreas de trabalho. Cada área de trabalho pode conter quantos pacotes você desejar. Para este seção, seu espaço de trabalho é denominado `ros2_ws`. Assim, a estrutura geral ficaria assim:
 
 ```bash
 ros2_ws/
@@ -826,7 +826,7 @@ Vamos removê-los por enquanto porque eles fornecem um aviso de problema do ROS2
 ```bash
 Warning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.9it will stop working
 ```
-Agora vamos criar nosso próprio teste. Não entraremos em detalhes sobre como criar testes para o ROS2 porque é um curso único, mas isso lhe dará um exemplo de onde começar:
+Agora vamos criar nosso próprio teste.
 ```bash
 # Compile with or without softlink , doesn't matter
 cd ~/ros2_ws/

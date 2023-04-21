@@ -29,7 +29,7 @@ ros2 launch my_robot_model spawn_robot_ros2.launch.xml
 Para ampliar o modelo, clique na tela Gazebo para ativá-lo e, em seguida, use a roda de rolagem do mouse para ampliar onde o ponteiro do mouse está.
 
 ## O que você vai aprender?
-Este curso ensinará como ir de um robô físico, ou mesmo um desenho de robô, para uma simulação completa com física, atuadores e sensores.
+Este seção ensinará como ir de um robô físico, ou mesmo um desenho de robô, para uma simulação completa com física, atuadores e sensores.
 
 Para isso, você aprenderá a criar um arquivo que define seu robô no ecossistema Gazebo-ROS2. Este arquivo determinará pesos, inércias, articulações, links, plugins de sensores e tudo o que for necessário para simular um robô.
 
