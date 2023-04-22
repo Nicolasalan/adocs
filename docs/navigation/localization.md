@@ -605,25 +605,27 @@ Mova o robô até que ele detecte onde está localizado. Esta etapa pode ser alc
 
 Serviço `reinitialize_global_localization`.
 
-(a) Abra o arquivo de configuração `amcl_config` e atualize os valores das partículas.
+1. Abra o arquivo de configuração `amcl_config` e atualize os valores das partículas.
 
-máx_partículas: 80000
-min_particles: 2000
+* `máx_partículas`: 80000
+* `min_particles`: 2000
+
 Lembre-se de recompilar, para que o novo arquivo de configuração seja instalado no diretório de instalação.
 
-(b) Agora execute a localização
+2. Agora execute a localização
 
-(c) Inicie o rviz e adicione a exibição para visualizar o ParticleCloud
+3. Inicie o rviz e adicione a exibição para visualizar o ParticleCloud
 
-(d) Forneça o 2D_pose_estimate e observe as partículas do robô
+4. Forneça o `2D_pose_estimate` e observe as partículas do robô
 
-(e) Agora chame o serviço `reinitialize_global_localization` e observe o espalhamento das partículas
+5. Agora chame o serviço `reinitialize_global_localization` e observe o espalhamento das partículas
 
 ```bash
 ros2 service call /reinitialize_global_localization std_srvs/srv/Empty
 ```
 Depois de ligar para o serviço, deverá ver algo como o seguinte no RVIZ:
-(e) Agora, use o teclado para mover o robô e veja como as partículas começam a se acumular. Em algum momento, as partículas devem estar todas localizadas no local do robô.
+
+6. Agora, use o teclado para mover o robô e veja como as partículas começam a se acumular. Em algum momento, as partículas devem estar todas localizadas no local do robô.
 
 > Primeiro, observe que o número de partículas aumentou. Isso é necessário quando você faz localização global. Como você precisa espalhar as partículas pelo mapa, precisará de muito mais delas.
 > Ao ligar para o serviço, observe que as partículas se dispersaram pelo mapa e o robô se localizou aleatoriamente. Isso ajuda quando você não sabe a localização estimada do robô no ambiente. Com esse serviço, o robô se localiza no ambiente e tenta localizar com a ajuda dos dados do sensor. À medida que obtém mais dados, o robô tentará se localizar. E quando ele se localizar, todas as partículas estarão acumuladas ao redor do robô.
