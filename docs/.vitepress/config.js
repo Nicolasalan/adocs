@@ -34,6 +34,7 @@ export default {
             { text: " Managing Nodes", link: "/ros/nodes" }, 
             { text: " Quality of Service (QoS)", link: "/ros/qos" },
             { text: " Understanding DDS in ROS2", link: "/ros/dds" },
+            { text: " Lifecycle Node", link: "/ros/life" },
           ],
         },
          {
