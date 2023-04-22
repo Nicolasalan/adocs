@@ -31,7 +31,8 @@ export default {
             { text: " ROS2 Python Build System", link: "/ros/build" },
             { text: " Advanced Launch Files", link: "/ros/launch" }, 
             { text: " Node Parameters", link: "/ros/param" },
-            { text: " Managing Nodes", link: "/ros/nodes" },
+            { text: " Managing Nodes", link: "/ros/nodes" }, 
+            { text: " Quality of Service (QoS)", link: "/ros/qos" },
           ],
         },
          {
