@@ -33,6 +33,7 @@ export default {
             { text: " Node Parameters", link: "/ros/param" },
             { text: " Managing Nodes", link: "/ros/nodes" }, 
             { text: " Quality of Service (QoS)", link: "/ros/qos" },
+            { text: " Understanding DDS in ROS2", link: "/ros/dds" },
           ],
         },
          {
