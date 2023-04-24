@@ -504,7 +504,7 @@ GripperInterface::open
 Analyze CPU ::: [ 60.3 ]
 ```
 
-Este exemplo aprimora o exemplo anterior incorporando dois nós que enviam dados usando o mecanismo de porta (veja a figura acima).
+Este exemplo aprimora o exemplo anterior incorporando dois nós que enviam dados usando o mecanismo de porta.
 
 * O robô verifica o estado da bateria. O nó imprime [bateria: OK]
 * O robô se aproxima do objeto para segurá-lo. O nó imprime ApproachObject: approach_object
@@ -850,8 +850,8 @@ Analyze CPU ::: [ 3.1 ]
 Executar este exemplo lhe dá a chance de se familiarizar com o threading. A beleza da estrutura BT é que o thread extra necessário para seu aplicativo é criado em segundo plano, criando o nó assíncrono.
 
 * Desde que você marque () a árvore quatro vezes, você receberá uma saída semelhante.
-* Mas veja, como o nó AnylyzeCPU é executado em um thread separado, isso não afeta o status desse nó (aqui, contador para 10).
-* Quando a contagem até 10 se esgota (pense que o sistema de controle do robô precisa de 10 segundos para calcular os dados), a saída é produzida (Analyze CPU ::: [ 3.1 ] [ Analysis process: FINISHED ]).
+* Mas veja, como o nó `AnylyzeCPU` é executado em um thread separado, isso não afeta o status desse nó (aqui, contador para 10).
+* Quando a contagem até 10 se esgota (pense que o sistema de controle do robô precisa de 10 segundos para calcular os dados), a saída é produzida (`Analyze CPU ::: [ 3.1 ] [ Analysis process: FINISHED ]`).
 
 ## Passando argumentos adicionais para um nó durante a inicialização do BT
 

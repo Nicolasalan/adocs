@@ -19,7 +19,7 @@ O BT não é o único framework dedicado ao ROS. O framework BT pode ser incorpo
 
 * Por exemplo, nesta unidade, você experimentará a estrutura BT pura sem ROS (você compilará e executará o programa sem ROS).
 * Enquanto você entende os princípios básicos, mostraremos como incorporar a mesma estrutura do programa BT no ambiente ROS2. (Preparamos uma simulação ROS2 para o final de cada unidade). Isso é fácil. Não se preocupe.
-Por favor, estude o código e as figuras representadas para ajudá-lo a construir uma intuição sobre o BT e a conexão com o ROS2.
+estude o código e as figuras representadas para ajudá-lo a construir uma intuição sobre o BT e a conexão com o ROS2.
 
 <div align="center">
      <img src="./img/intro.png" alt="Particles Filter" width="600px">
@@ -921,7 +921,7 @@ Conforme discutido anteriormente, vários benefícios resultam de BTs serem modu
 
 * `Modular`: Um sistema modular refere-se à facilidade com que suas partes podem ser desmontadas em unidades menores e depois remontadas.
 
-Um sistema modular pode ser criado, implementado, testado e reutilizado, um módulo por vez. As vantagens da modularidade, portanto, aumentam com a complexidade do sistema, permitindo uma estratégia de dividir e conquistar em todo o projeto, implementação e teste.
+Um sistema modular pode ser criado, implementado, testado e reutilizado, um módulo por vez. As vantagens da modularidade, portanto, aumentam com a complexidade do sistema, permitindo uma estratégia de dividir e conquistar, implementação e teste.
 
 Como cada subárvore de uma BT pode ser percebida como um módulo, as BTs são modulares em todos os tamanhos, desde as subárvores mais altas até as folhas da árvore.
 

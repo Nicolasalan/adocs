@@ -977,8 +977,6 @@ Dependendo da morfologia do seu sistema, você deve decidir quantos `num_threads
 
 Depois de cobrir o básico, aprofunde-se em mais casos de uso e pratique.
 
-Faça alguns exercícios usando um servidor de serviço, por exemplo, com diferentes tarefas a serem feitas em paralelo.
-
 Use as analogias dos trabalhadores, das correias transportadoras e das caixas para limpar os diferentes tópicos para explicar os grupos de retorno de chamada e as tarefas a serem realizadas.
 
 ### 1. Crie um novo pacote denominado `multithreading_ros2_examples`, com as seguintes dependências: std_msgs, geometry_msgs, std_srvs.
@@ -993,7 +991,7 @@ Além disso, imprima o tempo que ele está dormindo para que você possa ver qua
 
 Um editor rostopic publicado no tópico `/cmd_vel`, chamado `publisher_` .
 
-Um cronômetro que faz um loop a cada 1,0 segundo e publica no `publisher_` os valores `self.cmd` definidos no `SetBool_callback`. No método init, inicialize a variável `self.cmd` como `self.cmd = Twist()`. Por favor, registre o `self.cmd` enviado em cada loop para ver melhor o círculo do loop.
+Um cronômetro que faz um loop a cada 1,0 segundo e publica no `publisher_` os valores `self.cmd` definidos no `SetBool_callback`. No método init, inicialize a variável `self.cmd` como `self.cmd = Twist()`. Registre o `self.cmd` enviado em cada loop para ver melhor o círculo do loop.
 
 Se você não adicionar nada relacionado a multithreading e `Callback Group`, o comportamento que você deve ter do seu script deve ser o seguinte:
 
@@ -1083,7 +1081,7 @@ Isso ocorre porque agora você tem esta configuração:
      <img src="./img/output7.png" alt="Particles Filter" width="600px">
 </div>
 
-### 1. Crie um novo script Python chamado `multithreading_movement_server_and_calculation_server.py` baseado no criado no exercício 3.5 que agora é capaz de processar simultaneamente:
+### 1. Crie um novo script Python chamado `multithreading_movement_server_and_calculation_server.py` baseado no criado no exemplo 3.5 que agora é capaz de processar simultaneamente:
 
 * O retorno de chamada do servidor de serviço `SetBool_callback` do servidor de serviço chamado `/start_turn`.
 * DEFINIMOS UMA BANDEIRA PARA SÓ PUBLICAR QUANDO INICIAR E QUANDO O SERVIÇO FOR CHAMADO.
@@ -1115,7 +1113,7 @@ Como você pode ver, ao chamar até mesmo AMBOS OS SERVIDORES ao mesmo tempo, o 
      <img src="./img/output8.png" alt="Particles Filter" width="600px">
 </div>
 
-Por favor, tente diminuir o número de threads para 2 e 1, para ver os diferentes comportamentos. Veja como ambos os serviços podem entrar em conflito e não serem processados até que o processamento seja concluído.
+Tente diminuir o número de threads para 2 e 1, para ver os diferentes comportamentos. Veja como ambos os serviços podem entrar em conflito e não serem processados até que o processamento seja concluído.
 
 ## Detalhes dos grupos de retorno de chamada
 Você usou apenas grupos de retorno de chamada do tipo MutuallyExclusiveCallbackGroup. Isso ocorre porque eles são o tipo padrão em Nodes. No entanto, existe outro tipo chamado ReentrantCallbackGroup.
@@ -1507,7 +1505,7 @@ RESTRIÇÕES:
 
 * Inicie os dois nós no mesmo script Python.
 * Usar multithreading
-Tente reciclar o máximo de código possível, mesmo classes de exercícios EXTRA anteriores.
+Tente reciclar o máximo de código possível, mesmo classes de exemplos EXTRA anteriores.
 Ele deve publicar APENAS o círculo mais próximo detectado se vários forem detectados.
 Defina uma restrição de distância. Filtre todos os círculos detectados além de 5,0 metros.
 RESULTADOS

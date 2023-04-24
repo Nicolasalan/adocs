@@ -5,7 +5,7 @@
 * Passagem de parâmetro
 
 ## Use outros lançamentos dentro dos lançamentos
-Este tópico não foi explicado anteriormente porque não era necessário. No entanto, é comum ter um lançamento principal que chama outros lançamentos em sistemas ROS2. Veja um exemplo abaixo:
+Este tópico não foi explicado anteriormente porque não era necessário. No entanto, é comum ter um lançamento principal que chama outros lançamentos em sistemas ROS2.
 
 ### **1. Crie um novo pacote** chamado `launch_tests_pkg`
 

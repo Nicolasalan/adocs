@@ -534,7 +534,7 @@ entry_points={
 },
 ```
 
-Você deve substituir o `package-name` pelo nome do pacote no exercício e o `file-name` pelo nome do arquivo.
+Você deve substituir o `package-name` pelo nome do pacote no exemplo e o `file-name` pelo nome do arquivo.
 ```bash
 colcon build --packages-select localization_server
 ```
@@ -623,7 +623,6 @@ Lembre-se de recompilar, para que o novo arquivo de configuração seja instalad
 ```bash
 ros2 service call /reinitialize_global_localization std_srvs/srv/Empty
 ```
-Depois de ligar para o serviço, deverá ver algo como o seguinte no RVIZ:
 
 6. Agora, use o teclado para mover o robô e veja como as partículas começam a se acumular. Em algum momento, as partículas devem estar todas localizadas no local do robô.
 

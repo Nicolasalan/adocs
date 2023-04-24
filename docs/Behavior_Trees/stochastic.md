@@ -32,7 +32,7 @@ Lembre-se de que o BT é atualizado durante o tempo de execução!
 
 Simplificamos seu exemplo para BT descrito abaixo (BT na primeira iteração).
 
-O robô tem que atingir o alvo; no entanto, durante o movimento, ocorrem obstáculos. A ocorrência de obstáculos afeta o BT é estendido por novas ramificações para cumprir a tarefa planejada. BT indica que para satisfazer o BT, um dos filhos tem que dar TRUE (Fallback node). Podemos assumir que o robô não atinge o objetivo, então a criança com o nó Sequência deve dar VERDADEIRO. Aqui, o robô verifica se o caminho está livre, para que o robô possa se mover. Se a condição for livre, o movimento falha, então o BT é estendido (reorganização). Veja o diagrama abaixo.
+O robô tem que atingir o alvo; no entanto, durante o movimento, ocorrem obstáculos. A ocorrência de obstáculos afeta o BT é estendido por novas ramificações para cumprir a tarefa planejada. BT indica que para satisfazer o BT, um dos filhos tem que dar TRUE (Fallback node). Podemos assumir que o robô não atinge o objetivo, então a criança com o nó Sequência deve dar VERDADEIRO. Aqui, o robô verifica se o caminho está livre, para que o robô possa se mover. Se a condição for livre, o movimento falha, então o BT é estendido (reorganização).
 
 <div align="center">
      <img src="./img/exp.png" alt="Particles Filter" width="700px">

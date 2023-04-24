@@ -47,7 +47,7 @@ Este diagrama simples representa os diferentes estados possíveis de um controla
 
 O gerenciador do controlador é uma ferramenta que armazena e gerencia o estado de um controlador acionando transições de estado com base na entrada que ele recebe. Como tal, ele gerencia todo o ciclo de vida dos controladores, desde o carregamento até o descarregamento dos controladores e entre eles.
 
-A linha de comando é a primeira ferramenta que você aprenderá a interagir com o gerenciador do controlador. Outras opções disponíveis são usar serviços e usar o script spawner. Para mostrar melhor como tudo isso funciona, vamos percorrer uma série de exercícios. Você está pronto? É hora de praticar um pouco mais!
+A linha de comando é a primeira ferramenta que você aprenderá a interagir com o gerenciador do controlador. Outras opções disponíveis são usar serviços e usar o script spawner. Para mostrar melhor como tudo isso funciona, vamos percorrer uma série de exemplos. Você está pronto? É hora de praticar um pouco mais!
 
 ## Interagir com ros2_control usando a linha de comando
 
@@ -124,7 +124,7 @@ O robô não se move!
 
 Isso ocorre porque quando o estado de um controlador está inativo, o loop de controle não está em execução. Portanto, as articulações do robô não recebem nenhum comando que enviamos.
 
-Para continuar com o exercício, vamos desligar o controlador e o transmissor, como... desligar completamente. No jargão do ros2_control, dizemos "descarregar", então o comando é denominado descarregar_controlador:
+Para continuar com o exemplo, vamos desligar o controlador e o transmissor, como... desligar completamente. No jargão do ros2_control, dizemos "descarregar", então o comando é denominado descarregar_controlador:
 ```bash
 ros2 control unload_controller forward_position_controller
 ```

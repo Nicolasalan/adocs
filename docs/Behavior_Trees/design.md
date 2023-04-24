@@ -23,7 +23,7 @@ Usando a estrutura BehaviourTree.CPP, você cria a declaração de nós (seguind
 
 Um conjunto de ações definidas por um nó BT é considerado um callback (BT chama outras funções/ações). Neste seção, você define um conjunto de ações executadas no nó ROS. Além disso, o nó ROS se comunica com um robô ou simulação (no seu caso, Gazebo). Os nós ROS recebem o feedback e enviam o estado (feedback) para o nó BT. A análise de feedback afeta o nó BT e envia o retorno para a Raiz (SUCCESS, FAILURE ou RUNNING).
 
-Tendo em mente a pilha de abstrações definida anteriormente, você pode avaliar novamente o BT, que define o fluxo lógico. O projeto detalhado dos nós ROS é desvinculado do conceito BT.
+Tendo em mente a pilha de abstrações definida anteriormente, você pode avaliar novamente o BT, que define o fluxo lógico.
 
 Você não considera em detalhes como o nó executa a tarefa (por exemplo, calcula a cinemática inversa). No entanto, você considera apenas o comportamento do nó, ou seja, a funcionalidade do nó (como uma “caixa de bloco”). Ao arquitetar o BT, você sabe o que o nó ROS está fazendo, mas o detalhamento da implementação não é obrigatório nesse raciocínio abstrato.
 
@@ -49,7 +49,7 @@ Para arquitetar o BT de cada tarefa do robô, você definiu brevemente os primit
 
 Para fornecer uma compreensão completa da arquitetura BT, veja abaixo uma variedade de técnicas e abstrações de estrutura na seção a seguir. A palestra seguirá os princípios orientadores da abordagem de design XML. No entanto, você se concentrará principalmente em uma abordagem prática (usando exemplos C++).
 
-Por favor, esteja familiarizado com a hierarquia de tipo de nó representada no diagrama abaixo.
+Esteja familiarizado com a hierarquia de tipo de nó representada no diagrama abaixo.
 
 <div align="center">
      <img src="./img/type.png" alt="Particles Filter" width="700px">
@@ -275,7 +275,7 @@ Quanto ao número de filhos:
 
 ### Nós aninhados
 
-Os conceitos básicos de projeto devem ser mantidos em mente quando você arquiteta o BT. Por exemplo, o BT é realizado de cima para baixo e da esquerda para a direita. Usando esses conceitos, você pode construir a figura a seguir e deduzir os princípios de fluxo lógico XML.
+O BT é realizado de cima para baixo e da esquerda para a direita. Usando esses conceitos, você pode construir a figura a seguir e deduzir os princípios de fluxo lógico XML.
 
 Em seguida, examine o diagrama enquanto considera o relacionamento XML entre as operações.
 
@@ -322,7 +322,7 @@ Este tipo de sequência (Sequencial Reativo) é empregado quando a ação do nó
      <img src="./img/rec.png" alt="Particles Filter" width="500px">
 </div>
 
-Por favor, considere o diagrama abaixo, que deve lhe dar uma melhor compreensão do que acontece durante a execução deste exemplo. Como não estamos discutindo a implementação de C++, recomendamos que você execute o programa e estude o código.
+Considere o diagrama abaixo, que deve lhe dar uma melhor compreensão do que acontece durante a execução deste exemplo. Como não estamos discutindo a implementação de C++, recomendamos que você execute o programa e estude o código.
 
 <div align="center">
      <img src="./img/time.png" alt="Particles Filter" width="500px">
@@ -1197,7 +1197,7 @@ Desta vez, o robô avança; no entanto, durante esta viagem, surgem obstáculos.
 
 * Os obstáculos são detectados como anteriormente pelo laser instalado.
 * A ideia é exibir o nó assíncrono em ação (laser).
-* Assim que o obstáculo for removido (manualmente por você - veja abaixo o movimento de simulação esperado e suas tarefas manuais), o robô pode continuar.
+* Assim que o obstáculo for removido, o robô pode continuar.
 * Remova os obstáculos manualmente. Primeiro, investigue a propriedade do BT. Considere a figura que descreve o comportamento correto do robô e a implementação atual do BT. Algo está faltando. Tente analisar o que está faltando e “consertar” o BT.
 * Analise o script test_unit3.cpp e adicione as partes que faltam para que o robô execute o comportamento esperado.
 > DICA: A parte a ser modificada é a seção XML do script.

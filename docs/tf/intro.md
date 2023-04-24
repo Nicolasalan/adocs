@@ -158,10 +158,8 @@ Um dos recursos mais importantes é a capacidade de ativar/desativar a visualiza
 
 Além disso, normalmente você não deseja adicionar manualmente o TF toda vez que usar o RViz. Em vez disso, você pode salvar sua configuração atual, mas vamos pular isso agora.
 
-> Quando terminar o exercício anterior, pressione CTRL+C para parar os nós static_transform_publisher e rviz2 e poder digitar mais comandos. Não pare o Shell #1, que contém a simulação em execução.
-
 ## Os muitos quadros de coordenadas de um robô
-Ao trabalhar com robôs, devemos criar um modelo de robô para ter uma representação da estrutura do robô. No ROS usamos o que chamamos de arquivos URDF e XACRO para criar esses modelos de robôs. O que você precisa saber ao trabalhar com transformações é que cada articulação do robô tem um quadro de coordenadas associado a ela. Dessa forma, podemos acompanhar facilmente a posição dos links do robô no espaço. Para entender melhor esse conceito, dê uma olhada no seguinte exercício:
+Ao trabalhar com robôs, devemos criar um modelo de robô para ter uma representação da estrutura do robô. No ROS usamos o que chamamos de arquivos URDF e XACRO para criar esses modelos de robôs. O que você precisa saber ao trabalhar com transformações é que cada articulação do robô tem um quadro de coordenadas associado a ela. Dessa forma, podemos acompanhar facilmente a posição dos links do robô no espaço. Para entender melhor esse conceito, dê uma olhada no seguinte exemplo:
 ```bash
 source ~/ros2_ws/install/setup.bash
 ros2 lançamento tiago_demo tiago_demo.launch.py
@@ -179,12 +177,12 @@ rviz2
 
 Vá para as Ferramentas Gráficas e adicione uma exibição de modelo de robô.
 
-Para adicionar um modelo de robô, clique no botão Adicionar na parte inferior do painel lateral esquerdo. Você verá uma lista de diferentes tipos de exibição oferecidos na janela emergente que aparecerá. Role a lista até encontrar RobotModel e clique em OK. Um item RobotModel agora deve aparecer no painel do lado esquerdo do RVIZ, mas nada é exibido na tela principal do RVIZ. Isso é esperado, pois você precisa clicar no triângulo preto à esquerda do RobotModel para abrir os detalhes. Confirme se a Fonte da descrição está definida como Tópico e, em seguida, clique no espaço vazio em branco à direita do Tópico da descrição e digite `/robot_description`. Veja a imagem abaixo para referência:
+Para adicionar um modelo de robô, clique no botão Adicionar na parte inferior do painel lateral esquerdo. Você verá uma lista de diferentes tipos de exibição oferecidos na janela emergente que aparecerá. Role a lista até encontrar RobotModel e clique em OK. Um item RobotModel agora deve aparecer no painel do lado esquerdo do RVIZ, mas nada é exibido na tela principal do RVIZ. Isso é esperado, pois você precisa clicar no triângulo preto à esquerda do RobotModel para abrir os detalhes. Confirme se a Fonte da descrição está definida como Tópico e, em seguida, clique no espaço vazio em branco à direita do Tópico da descrição e digite `/robot_description`.
 
 Você está indo bem até agora, mas como pode ver, há outro problema: todo o modelo é branco.
 
 Este é um problema comum ao carregar um modelo de robô no Rviz. Felizmente, você já sabe como resolver o problema! O modelo do robô não é exibido corretamente porque o quadro fixo no Rviz não foi definido corretamente. Se você alterar o quadro fixo para base_footprint, verá que o modelo do robô é exibido normalmente e o status global: Ok.
 
-Em seguida, adicione um display TF como você fez no exercício anterior.
+Em seguida, adicione um display TF como você fez no exemplo anterior.
 
 Cada um desses eixos vermelho, azul e verde representa um quadro de coordenadas. Como você pode ver, mesmo em um robô de tamanho médio, dezenas de quadros de coordenadas podem ser usados. Portanto, é essencial acompanhar onde cada quadro de coordenadas está em qualquer ponto no tempo para garantir que o robô esteja ciente da posição de seus elos no espaço e de outros objetos no ambiente. Para gerenciar essa complexidade, precisamos de ferramentas e métodos especializados.

@@ -145,7 +145,7 @@ Parameter name: velocity
   Constraints:
 ```
 
-Você pode ver que o parâmetro de velocidade usa um tipo duplo, que parece configurar a velocidade do robô. Legal!
+Você pode ver que o parâmetro de velocidade usa um tipo duplo, que parece configurar a velocidade do robô.
 
 Você também pode obter o valor atual desse parâmetro de velocidade com o seguinte comando:
 ```bash
@@ -213,7 +213,7 @@ Isso irá gerar um arquivo chamado `param_vel_node.yaml` no caminho onde você e
     use_sim_time: false
     velocity: 0.0
 ```
-Como você pode ver, os parâmetros são armazenados no formato de arquivo YAML. Obviamente, também é possível carregar esse arquivo YAML em um nó em execução. Tente um exercício rápido. Modifique o parâmetro de velocidade no arquivo YAML gerado:
+Como você pode ver, os parâmetros são armazenados no formato de arquivo YAML. Obviamente, também é possível carregar esse arquivo YAML em um nó em execução. Tente um exemplo rápido. Modifique o parâmetro de velocidade no arquivo YAML gerado:
 
 > param_vel_node.yaml
 

@@ -243,7 +243,7 @@ source install/setup.bash
 ```
 Agora, execute esses scripts e veja o que acontece:
 
-Observe que você está CONFIGURANDO A versão DDS explicitamente. Isso ocorre porque cada implementação DDS tem algumas QoS que suportam e outras que não. Dessa forma, você garante que está usando o ciclone porque é a versão padrão no Galactic.
+> Observe que você está CONFIGURANDO A versão DDS explicitamente. Isso ocorre porque cada implementação DDS tem algumas QoS que suportam e outras que não. Dessa forma, você garante que está usando o ciclone porque é a versão padrão no Galactic.
 
 ```bash
 cd ~/ros2_ws/

@@ -308,7 +308,7 @@ critics: ["RotateToGoal", "Oscillation", "ObstacleFootprint", "GoalAlign", "Path
 ```
 Esses plugins são definidos [AQUI](https://github.com/ros-planning/navigation2/tree/main/nav2_dwb_controller/dwb_critics). Por exemplo, aqui está o plug-in [OSCILLATION CRITIC](https://github.com/ros-planning/navigation2/blob/main/nav2_dwb_controller/dwb_critics/src/oscillation.cpp). Os plugins críticos são da classe base `dwb_core::TrajectoryCritic`.
 
-Agora você criará vários exemplos e exercícios que ensinam como modificar e criar Plugins CUSTOM para **Costmaps**, **Planning** e **Controllers**.
+Agora você criará vários exemplos que ensinam como modificar e criar Plugins CUSTOM para **Costmaps**, **Planning** e **Controllers**.
 
 ## Criação de plug-ins Nav2 personalizados
 

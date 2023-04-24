@@ -127,7 +127,7 @@ Por que é a versão padrão?
 O que o torna uma boa opção de DDS para ROS2?
 
 #### Elementos do Eclipse Cyclone
-O Eclipse Cyclone é uma implementação de DDS que teve um bom desempenho e possui dois projetos filhos que estão integrados ou provavelmente serão integrados no futuro, o que o torna uma boa opção para DDS:
+O `Eclipse Cyclone` é uma implementação de DDS que teve um bom desempenho e possui dois projetos filhos que estão integrados ou provavelmente serão integrados no futuro, o que o torna uma boa opção para DDS:
 
 * Eclipse iceoryx:
 
@@ -629,7 +629,7 @@ Você pode comparar os resultados obtidos com a solução abaixo.
 
 Agora inicie os mesmos scripts, mas com DDS Middleware diferente, neste caso, FASTDDS.
 
-* Compare a perda de dados e o delta entre Pub/Sub e veja se há uma diferença notável.
+* Compare a perda de dados e o delta entre `Pub/Sub` e veja se há uma diferença notável.
 
 Você pode comparar os resultados obtidos com a solução abaixo.
 

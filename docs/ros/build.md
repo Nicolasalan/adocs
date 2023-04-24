@@ -92,7 +92,7 @@ ros2_ws/
 ## Compilar um pacote
 Quando você cria um pacote, você precisa compilá-lo para fazê-lo funcionar.
 
-O comando a seguir irá compilar todo o seu diretório src e precisa ser emitido dentro do diretório inicial de um espaço de trabalho para funcionar (`ros2_ws`). Por favor, lembre-se disso!
+O comando a seguir irá compilar todo o seu diretório src e precisa ser emitido dentro do diretório inicial de um espaço de trabalho para funcionar (`ros2_ws`).
 ```bash
 cd ~/ros2_ws
 colcon build

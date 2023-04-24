@@ -186,8 +186,6 @@ Clique no botão `Add` abaixo de `Displays` e escolha a exibição `Map`. Rviz-a
 
 Nas propriedades da exibição do mapa, defina o tópico para `/map`.
 
-Você deverá ver algo como a imagem abaixo em sua tela:
-
 Se você não conseguir ver o mapa, verifique se os parâmetros de qualidade de serviço (QoS) do tópico `/map` estão corretos (como na figura).
 
 Adicione mais algumas exibições:

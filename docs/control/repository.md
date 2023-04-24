@@ -127,8 +127,8 @@ Agora, desligue o controlador.
 ros2 control set_controller_state forward_position_controller stop
 ```
 
-#### Limpe antes de passar para o próximo exercício
-Antes de passar para o próximo exercício, certifique-se de ter parado o nó robot_state_publisher iniciado anteriormente pressionando Ctrl + C no console onde você executou o arquivo `spawn_rrbot.launch.py`.
+#### Limpe antes de passar para o próximo exemplo
+Antes de passar para o próximo exemplo, certifique-se de ter parado o nó robot_state_publisher iniciado anteriormente pressionando Ctrl + C no console onde você executou o arquivo `spawn_rrbot.launch.py`.
 
 Exclua o antigo modelo de robô no Gazebo. Como o robô mostrado no momento no Gazebo implementa um plug-in do Gazebo que lê o arquivo de configuração .yaml, exclua-o para gerar um novo robô com um arquivo de configuração atualizado.
 
@@ -148,7 +148,7 @@ Seu arquivo de descrição do robô deve incluir uma interface de esforço corre
 ```
 ### Usando effort_controllers
 
-Você deve usar as tags XML fornecidas abaixo e remover as tags XML adicionadas nos exercícios anteriores, elas não são mais necessárias.
+Você deve usar as tags XML fornecidas abaixo e remover as tags XML adicionadas nos exemplos anteriores, elas não são mais necessárias.
 ```xml
   <ros2_control name="effort_controllers_exercise" type="system">
     <hardware>
@@ -255,7 +255,7 @@ Seu arquivo de descrição do robô deve incluir uma interface de velocidade cor
 <command_interface name="velocity">
 ```
 ## Usando controladores de velocidade
-Vá em frente, abra seu editor de código e abra o arquivo de descrição do robô chamado `rrbot.xacro` do exercício anterior. Insira esta implementação pré-fornecida de tags XML `ros2_control`:
+Vá em frente, abra seu editor de código e abra o arquivo de descrição do robô chamado `rrbot.xacro` do exemplo anterior. Insira esta implementação pré-fornecida de tags XML `ros2_control`:
 ```xml
     <ros2_control name="velocity_controller_exercise" type="system">
 
@@ -353,10 +353,10 @@ Para usá-lo, defina um nome de sua preferência e especifique o tipo `forward_c
     forward_position_controller:
       type: forward_command_controller/ForwardCommandController
 ```
-Um aspecto particular do `forward_command_controller` é que o nome da interface deve ser definido por um parâmetro. Portanto, o arquivo de configuração `.yaml` deve incluir o parâmetro `interface_name` conforme mostrado abaixo e o arquivo de descrição do robô também deve incluir uma interface com o mesmo valor de parâmetro. Faça o exercício abaixo para entender melhor como isso é feito.
+Um aspecto particular do `forward_command_controller` é que o nome da interface deve ser definido por um parâmetro. Portanto, o arquivo de configuração `.yaml` deve incluir o parâmetro `interface_name` conforme mostrado abaixo e o arquivo de descrição do robô também deve incluir uma interface com o mesmo valor de parâmetro. Faça o exemplo abaixo para entender melhor como isso é feito.
 
 ### Usando um forward_command_controller
-Você ainda deve ter o arquivo `rrbot.xacro` do exercício anterior aberto. Caso contrário, vá em frente e abra-o agora. Remova as tags XML `ros2_control` do exercício anterior. As tags XML para este exercício têm a seguinte aparência:
+Você ainda deve ter o arquivo `rrbot.xacro` do exemplo anterior aberto. Caso contrário, vá em frente e abra-o agora. Remova as tags XML `ros2_control` do exemplo anterior. As tags XML para este exemplo têm a seguinte aparência:
 ```xml
 <ros2_control name="forward_command_controllers_exercise" type="system">
 
@@ -683,7 +683,7 @@ Acesse `/ros2_ws/src/ros2_control_course/unit5` e localize o pacote ROS chamado 
     </ros2_control>
 ```
 #### Adicionar o plug-in Gazebo ROS
-Como você sabe dos exercícios anteriores, ao executar em simulação, você precisa dizer ao Gazebo como mover as articulações do robô simulado. Neste exemplo, esse plug-in é definido em um arquivo xacro separado.
+Como você sabe dos exemplos anteriores, ao executar em simulação, você precisa dizer ao Gazebo como mover as articulações do robô simulado. Neste exemplo, esse plug-in é definido em um arquivo xacro separado.
 
 Dentro do pacote diffbot_description, vá até robots e abra o arquivo `diffbot.gazebo.xacro`. Adicione o seguinte bloco de código onde indicado pelos comentários do código.
 ```xml
@@ -754,7 +754,6 @@ diffbot_base_controller:
     angular.z.max_jerk: 0.0
     angular.z.min_jerk: 0.0
 ```
-> Nota: certifique-se de ter excluído o robô do exercício Gazebo anterior antes de continuar.
 
 Agora é hora de testá-lo. Antes de continuar, você deve criar o espaço de trabalho para instalar o novo arquivo de configuração.
 ```bash

@@ -545,7 +545,7 @@ Aqui é onde o Joint State Publisher entra em jogo, e o `joint_state_publisher_g
 
 Este nó permite definir manualmente o estado da junta, deixando disponível o TFS para todos os elementos.
 
-Este é o comando para iniciá-lo. Você vai usá-lo no próximo exercício.
+Este é o comando para iniciá-lo. Você vai usá-lo no próximo exemplo.
 ```bash
 cd ~/ros2_ws
 source install/setup.bash
@@ -886,7 +886,7 @@ source install/setup.bash
 ros2 run joint_state_publisher_gui joint_state_publisher_gui
 ```
 Agora você deve ter no RVIZ algo assim, ajustando um pouco o tamanho dos TF Markers e retirando os nomes, para visualizar melhor o que está acontecendo:
-Veja que na imagem acima desativamos os nomes dos frames do TF. Para fazer isso, clique no triângulo preto à esquerda do TF para abrir os detalhes. Em seguida, desmarque a caixa de seleção `Mostrar nomes` e veja como os nomes dos quadros desaparecem.
+Veja que desativamos os nomes dos frames do TF. Para fazer isso, clique no triângulo preto à esquerda do TF para abrir os detalhes. Em seguida, desmarque a caixa de seleção `Mostrar nomes` e veja como os nomes dos quadros desaparecem.
 
 Para alterar o tamanho dos eixos do quadro, mantenha a visualização de detalhes do TF aberta e clique no campo que está à esquerda de `Marker Scale` e substitua o valor padrão 1,0 por 0,2.
 

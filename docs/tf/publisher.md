@@ -109,7 +109,7 @@ Observe que você deve manter o foco no terminal clicando com o botão esquerdo 
 > CONCLUSÃO: Você precisa do Robot State Publisher se quiser visualizar todas as partes do corpo do robô no Rviz.
 
 ## Publicador de Estado do Robô
-O `Robot State Publisher` possui diversas funções que iremos comentar agora:
+O `Robot State Publisher` possui diversas funções que somente deve comentar agora:
 
 Toma como ENTRADA o arquivo de descrição do modelo do robô URDF ou XACRO.
 Ele publica esta descrição no tópico por padrão `/robot_description`, a partir do qual outras ferramentas como Gazebo ou Rviz irão ler.
@@ -252,5 +252,5 @@ Você também pode dar uma olhada para ver o que o `Robot State Publisher` faz c
 ```bash
 ros2 node info /unicycle_robot_state_publisher
 ```
-Veja como tem como entrada joint_states
+Veja como tem como entrada `joint_states`
 E como saída tem `/tf`, `/tf_static` (para as juntas fixas) e `/unicycle_bot_robot_description`.

@@ -286,7 +286,7 @@ Esse último colchete de fechamento indica o final do namespace.
 ## Escreva o método `on_init()`
 Durante o estágio inicial, declaramos todos os parâmetros que aceitaremos durante a vida útil do controlador. Isso para que o tipo e o nome do parâmetro fiquem bem definidos na hora da inicialização, o que reduz as chances de configuração incorreta posteriormente.
 
-Para continuar com o exercício da seção anterior, copie e cole o código mostrado abaixo no arquivo `rrbot_controller.cpp`. Certifique-se de colar isso dentro dos colchetes do namespace.
+Copie e cole o código mostrado abaixo no arquivo `rrbot_controller.cpp`. Certifique-se de colar isso dentro dos colchetes do namespace.
 
 > rrbot_controller.cpp
 
@@ -972,7 +972,7 @@ Localize as tags do plug-in Gazebo ros2_control e modifique o elemento correto p
   </gazebo>
 ```
 ## Crie um novo arquivo de inicialização para gerar o robô e executar o novo controlador
-A criação de um novo arquivo de inicialização é opcional, pois é possível iniciar e parar os controladores usando apenas a interface de linha de comando do gerenciador do controlador. Para completar, aqui está um exercício que explica como criar um novo arquivo de inicialização que gera o robô no Gazebo inicia o novo controlador.
+A criação de um novo arquivo de inicialização é opcional, pois é possível iniciar e parar os controladores usando apenas a interface de linha de comando do gerenciador do controlador. Para completar, aqui está um exemplo que explica como criar um novo arquivo de inicialização que gera o robô no Gazebo inicia o novo controlador.
 Vamos aderir aos princípios de separação de interesses e colocar este arquivo de inicialização dentro do pacote `my_robot_bringup`, onde estamos mantendo os outros arquivos de inicialização.
 ```bash
 touch ~/ros2_ws/src/my_robot_bringup/launch/rrbot_with_rrbot_controller.launch.py

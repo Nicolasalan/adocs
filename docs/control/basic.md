@@ -45,7 +45,7 @@ Para adicionar `ros2_control` ao nosso robô, seguiremos os seguintes passos:
 * Teste o robô controlado por `ros2_control`
 
 ## Criar um novo pacote
-Ao trabalhar com o ROS, geralmente é recomendável dividir um projeto robótico em pacotes separados, pois isso permite um design modular e minimiza as dependências por pacote. Portanto, vamos começar criando um novo pacote dedicado exclusivamente a manter a configuração do `ros2_control` e os arquivos de inicialização. Acompanhe o exercício abaixo para fazer exatamente isso:
+Ao trabalhar com o ROS, geralmente é recomendável dividir um projeto robótico em pacotes separados, pois isso permite um design modular e minimiza as dependências por pacote. Portanto, vamos começar criando um novo pacote dedicado exclusivamente a manter a configuração do `ros2_control` e os arquivos de inicialização.
 
 Agora, vá para o diretório src dentro de `ros2_ws`:
 ```bash
@@ -141,7 +141,7 @@ Depois, no mesmo nível de indentação, definimos os controladores que queremos
      joint1_position_controller:
           type: effort_controllers/JointPositionController
 ```
-Mas qual é o tipo? O tipo - para ser específico o tipo de controlador - refere-se ao nome do plug-in ROS2_control que será usado. Você pode consultar o nome dos plug-ins de controladores comuns fornecidos pelo pacote `ros2_controllers`. Você também criará um plug-in de controlador personalizado e fornecerá a ele um nome de sua escolha na unidade 6. No momento, você não precisa saber mais detalhes, por favor, confie em nós aqui e vamos continuar com as próximas etapas.
+Mas qual é o tipo? O tipo - para ser específico o tipo de controlador - refere-se ao nome do plug-in ROS2_control que será usado. Você pode consultar o nome dos plug-ins de controladores comuns fornecidos pelo pacote `ros2_controllers`. Você também criará um plug-in de controlador personalizado e fornecerá a ele um nome de sua escolha na unidade 6. No momento, você não precisa saber mais detalhes, confie em nós aqui e vamos continuar com as próximas etapas.
 
 ```yaml
 ### Properties of the controllers that we will use and definition of joints to use ###
@@ -241,7 +241,7 @@ Na próxima unidade, mostraremos em detalhes como escrever uma interface de hard
 
 Este bloco de marcas XML está adicionando um elemento `< joint name=" ">` como elementos filhos da marca `< ros2_control>`. O elemento `< joint name=" ">` é usado para definir quais interfaces de comando e interfaces de estado são habilitadas para cada junta. Por exemplo, você pode definir aqui para ter apenas uma interface de comando que permite apenas posições de comando para as juntas. Mas você também pode optar por adicionar uma segunda interface de comando que permita velocidades de comando. O mesmo se aplica às interfaces de estado. Usando a tag `< state_interface name=.. "/ >` você define quais magnitudes de estado da articulação (por exemplo, posição, velocidade, esforço, aceleração, etc.) são disponibilizadas (transmitidas) por `ros2_control` para cada articulação.
 
-Repetindo a estrutura mostrada acima, adicionamos tantos elementos `< joint name=" ">` quantas juntas reais o robô tiver. Então, internamente, definimos tantas interfaces de comando e interfaces de estado por junta quanto nosso controlador precisar e o hardware do robô suportar. Desculpas se estamos nos adiantando novamente aqui, tenha certeza de que veremos isso com mais detalhes nas unidades subsequentes. Vamos continuar a ver qual é o último grupo de novos elementos:
+Repetindo a estrutura mostrada acima, adicionamos tantos elementos `< joint name=" ">` quantas juntas reais o robô tiver. Então, internamente, definimos tantas interfaces de comando e interfaces de estado por junta quanto nosso controlador precisar e o hardware do robô suportar. 
 
 ```xml
 
@@ -488,6 +488,3 @@ ros2 tópico pub /forward_position_controller/commands std_msgs/msg/Float64Multi
 - 0,79" -1
 ```
 Incrível! Com apenas algumas etapas de configuração e nenhum desenvolvimento, agora podemos mover o robô publicando comandos em um tópico exposto. Agora nosso robô pode interagir com todo o ecossistema ros2.
-
-
-> IMPORTANTE: Antes de iniciar o próximo exercício, certifique-se de ter parado os processos iniciados anteriormente pressionando Ctrl + C no console onde os iniciou.
