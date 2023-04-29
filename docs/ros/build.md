@@ -10,9 +10,9 @@ No ROS2, você pode criar dois tipos de pacotes: pacotes Python e pacotes CMake 
 
 Todo pacote Python terá a seguinte estrutura de arquivos e pastas:
 
-* package.xml - Arquivo contendo meta-informações sobre o pacote (mantenedor do pacote, dependências, etc.).
-* setup.py - Arquivo contendo instruções de como compilar o pacote.
-* setup.cfg - Arquivo que define onde os scripts serão instalados.
+* `package.xml` - Arquivo contendo meta-informações sobre o pacote (mantenedor do pacote, dependências, etc.).
+* `setup.py` - Arquivo contendo instruções de como compilar o pacote.
+* `setup.cfg` - Arquivo que define onde os scripts serão instalados.
 
 `/< package_name>` - Este diretório sempre terá o mesmo nome do seu pacote. Você colocará todos os seus scripts Python dentro desta pasta. Observe que ele já contém um arquivo `__init__.py` vazio.
 
@@ -160,7 +160,7 @@ Este comando o levará à raiz do seu workapce. Neste caso, é `/home/user/ros2_
 Você pode ler mais detalhes sobre como configurar `colcon_cd` em seu computador local aqui: [COLCON SETUP PAGE](https://colcon.readthedocs.io/en/released/user/installation.html#quick-directory-changes)
 
 ## Compreendendo o arquivo setup.py
-Para que o colcon encontre os arquivos de inicialização, você precisa informar as ferramentas de configuração do Python sobre seus arquivos de inicialização usando o parâmetro data_files de setup.py.
+Para que o colcon encontre os arquivos de inicialização, você precisa informar as ferramentas de configuração do Python sobre seus arquivos de inicialização usando o parâmetro `data_files` de `setup.py`.
 
 Para fazer isso, você precisa adicionar algumas linhas ao seu arquivo setup.py. Essas linhas já estão no arquivo.
 ```python
@@ -221,7 +221,7 @@ setup(
     
 )
 ```
-Com essas linhas, você está adicionando um ponto de entrada ao script que escreveu anteriormente simple.py. Você pode ver esta linha da seguinte maneira:
+Com essas linhas, você está adicionando um ponto de entrada ao script que escreveu anteriormente `simple.py`. Você pode ver esta linha da seguinte maneira:
 ```python
 '<executable_name> = <package_name>.<script_name>:main'
 ```
@@ -302,8 +302,8 @@ Quando você cria um pacote ROS2 em Python, os seguintes parâmetros são inclu�
 classificadores**: String que descreve as categorias do pacote.
 * **description**: Descreve o pacote em uma única linha.
 * **licença**
-* **entry_points**: Dicionário mapeando nomes de grupos de pontos de entrada para strings que definem os pontos de entrada, que são usados para dar suporte à descoberta dinâmica de serviços ou plug-ins fornecidos por um projeto (ou seja, ser capaz de digitar ros2 run package_name executable_name no terminal). Essencial.
-Agora, se você der uma olhada no setup.cfg, verá que ele foi gerado com o seguinte:
+* **entry_points**: Dicionário mapeando nomes de grupos de pontos de entrada para strings que definem os pontos de entrada, que são usados para dar suporte à descoberta dinâmica de serviços ou `plug-ins` fornecidos por um projeto (ou seja, ser capaz de digitar ros2 run `package_name` `executable_name` no terminal). Essencial.
+Agora, se você der uma olhada no `setup.cfg`, verá que ele foi gerado com o seguinte:
 
 ```bash
 [develop]
@@ -508,7 +508,7 @@ drwxr-xr-x 2 user user 4096 Feb 10 11:46 build_test_pkg.egg-info/
 -rw-r--r-- 1 user user 1517 Feb 10 11:46 install.log
 ```
 
-Aqui temos apenas esta pasta `build/build_test_pkg/build`, sem softlink. Dentro desta pasta, podemos encontrar no final uma cópia HARD do script python `script1.py`:
+Aqui temos apenas esta pasta `build/build_test_pkg/build`, sem `softlink`. Dentro desta pasta, podemos encontrar no final uma cópia HARD do script python `script1.py`:
 
 ```bash
 ls build/build_test_pkg/build/lib/build_test_pkg/
@@ -606,9 +606,9 @@ lrwxrwxrwx 1 user user   79 Feb 10 10:44 params.yaml -> /home/user/ros2_ws/src/r
 
 ## Caso especial: scripts Python
 
-Os scripts python são um caso especial. Eles são os únicos que se beneficiam da instalação do link simbólico. O motivo é que eles estão usando o sistema de gerenciamento de pacotes setup.py e alguma geração inteligente de arquivos para poder usar a funcionalidade de softlink.
+Os scripts python são um caso especial. Eles são os únicos que se beneficiam da instalação do link simbólico. O motivo é que eles estão usando o sistema de gerenciamento de pacotes `setup.py` e alguma geração inteligente de arquivos para poder usar a funcionalidade de `softlink`.
 
-Quando compilamos, os scripts python para os quais definimos um ponto de entrada no setup.py gerarão este arquivo na pasta de instalação:
+Quando compilamos, os scripts python para os quais definimos um ponto de entrada no `setup.py` gerarão este arquivo na pasta de instalação:
 
 ```bash
 cat install/build_test_pkg/lib/build_test_pkg/script1_exe
