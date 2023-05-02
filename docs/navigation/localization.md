@@ -110,7 +110,7 @@ ROS possui um algoritmo muito robusto para localização, o AMCL (Adaptive Monte
 Ele implementa a abordagem adaptativa (ou amostragem KLD) de localização de Monte Carlo (conforme descrito por Dieter Fox), que usa um filtro de partículas para rastrear a pose de um robô em relação a um mapa conhecido.
 
 Um robô ROS é localizado quando alguém publica uma transformação entre o quadro `/map` e o quadro `/odom`.
-Isso significa que o quadro `/odom` do robô sabe sua posição relativa ao quadro `/map`. Portanto, o robô sabe sua posição no mapa, porque seu quadro `/base_link` está diretamente conectado ao quadro /odom.
+Isso significa que o quadro `/odom` do robô sabe sua posição relativa ao quadro `/map`. Portanto, o robô sabe sua posição no mapa, porque seu quadro `/base_link` está diretamente conectado ao quadro `/odom`.
 
 Quando tudo está correto, o AMCL é o responsável por publicar essa transformação. Agora você aprenderá como configurar o AMCL para publicar essa transformação.
 
@@ -152,7 +152,7 @@ Estes são os campos que você precisa indicar no lançamento do nó:
      parameters=[nav2_yaml]
 ```
 
-### 3. Para o lançamento do nó lifecycle_manager
+### 3. Para o lançamento do nó `lifecycle_manager`
 Este nó gerencia o ciclo de vida dos nós envolvidos na navegação. Você aprenderá mais sobre isso mais tarde.
 * O lifecycle_manager é fornecido pelo pacote `nav2_lifecycle_manager`.
 * O executável se chama `lifecycle_manager`.
@@ -171,7 +171,7 @@ Este nó gerencia o ciclo de vida dos nós envolvidos na navegação. Você apre
                {'node_names': ['map_server','amcl']}])
 ```
 
-Crie um arquivo de lançamento que inicie o sistema de localização para o robô simulado usando o mapa criado no topivo anterior.
+Crie um arquivo de lançamento que inicie o sistema de localização para o robô simulado usando o mapa.
 
 * Crie um novo pacote chamado `localization_server`.
 * Crie um diretório de configuração e um diretório de lançamento.
@@ -179,7 +179,7 @@ Crie um arquivo de lançamento que inicie o sistema de localização para o rob�
 * Dentro do diretório de configuração, inclua um arquivo yaml chamado `amcl_config.yaml` com o seguinte conteúdo:
 
 > amcl_config.yaml
-```lua
+```yaml
 amcl:
   ros__parameters:
     use_sim_time: True
@@ -366,7 +366,7 @@ Existem três categorias de parâmetros do ROS que podem ser usadas para configu
 
 * `update_min_d` (duplo, padrão: 0,25 metros): Movimento translacional necessário antes de executar uma atualização de filtro.
 
-* `update_min_a` (duplo, padrão: 0,2 radianos): O movimento rotacional é necessário antes de executar uma atualização de filtro.
+* `update_min_a` (duplo, padrão: 0,2 radianos): O movimento rotacional é necessário antes de executar uma atualização de filtro. 
 
 * `resample_interval` (int, padrão: 1): O número de atualizações de filtro necessárias antes da reamostragem.
 
@@ -376,13 +376,13 @@ Existem três categorias de parâmetros do ROS que podem ser usadas para configu
 
 * `recovery_alpha_fast` (duplo, padrão: 0.0 (desabilitado)): A taxa de decaimento exponencial para o filtro de peso médio rápido é usada para decidir quando recuperar adicionando poses aleatórias. Um bom valor pode ser 0,1.
 
-* `set_initial_pose` (bool, padrão: falso): Faz com que o AMCL defina a pose inicial dos parâmetros initial_pose* em vez de aguardar a mensagem initial_pose.
+* `set_initial_pose` (bool, padrão: falso): Faz com que o AMCL defina a pose inicial dos parâmetros `initial_pose` em vez de aguardar a mensagem `initial_pose`.
 
 * `initial_pose` (Pose2D, {0.0, 0.0, 0.0}): Coordenadas X, Y, Z e guinada da pose inicial do quadro de base do robô (metros e radianos) no quadro global.
 
-* `always_reset_initial_pose` (duplo, padrão: falso): Requer que AMCL receba uma pose inicial por meio do tópico ou do parâmetro initial_pose* (com o parâmetro set_initial_pose: true) quando redefinido. Caso contrário, por padrão, o AMCL usará a última pose conhecida para inicializar.
+* `always_reset_initial_pose` (duplo, padrão: falso): Requer que AMCL receba uma pose inicial por meio do tópico ou do parâmetro `initial_pose` (com o parâmetro `set_initial_pose`: true) quando redefinido. Caso contrário, por padrão, o AMCL usará a última pose conhecida para inicializar.
 
-* `save_pose_rate` (duplo, padrão: 0,5 Hz): Taxa máxima (Hz) na qual armazenar a última pose estimada e covariância para o servidor de parâmetros, nas variáveis ~initialpose e ~initialcov. Essa pose salva será usada nas execuções subsequentes para inicializar o filtro (-1,0 para desabilitar).
+* `save_pose_rate` (duplo, padrão: 0.5 Hz): Taxa máxima (Hz) na qual armazenar a última pose estimada e covariância para o servidor de parâmetros, nas variáveis `initialpose` e `initialcov`. Essa pose salva será usada nas execuções subsequentes para inicializar o filtro (-1.0 para desabilitar).
 
 ### Parâmetro do modelo de laser
 Observe que quaisquer pesos de mistura em uso devem somar 1. Por exemplo, o modelo de viga usa todos os 4: `z_hit`, `z_short`, `z_max` e `z_rand`. Por outro lado, o modelo do campo_verossimilhança usa apenas 2: `z_hit` e `z_rand`.
